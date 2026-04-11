@@ -46,26 +46,28 @@
 
     .page {
       width: 100%;
-      max-width: 980px;
+      max-width: 1200px;
     }
 
+    /* KEY CHANGE: dynamic responsive grid */
     .row {
       display: flex;
+      flex-wrap: wrap;
       gap: 14px;
-      overflow-x: auto;
-      padding-bottom: 4px;
-      scrollbar-width: thin;
     }
 
+    /* KEY CHANGE: flexible cards */
     .card {
-      width: 214px;
+      flex: 1 1 220px;     /* grows, shrinks, base size */
+      min-width: 200px;    /* prevents too small */
+      max-width: 260px;    /* prevents too wide */
       min-height: 200px;
+
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 16px 16px 14px;
-      flex: 0 0 auto;
+      padding: 16px;
     }
 
     .header {
@@ -83,27 +85,17 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex: 0 0 auto;
     }
 
-    .icon-box.blue {
-      background: var(--blue-bg);
-    }
-
-    .icon-box.green {
-      background: var(--green-bg);
-    }
-
-    .icon-box.purple {
-      background: var(--purple-bg);
-    }
+    .icon-box.blue { background: var(--blue-bg); }
+    .icon-box.green { background: var(--green-bg); }
+    .icon-box.purple { background: var(--purple-bg); }
 
     h2 {
       margin: 2px 0 0;
       font-size: 13px;
       line-height: 1.15;
       font-weight: 800;
-      letter-spacing: -0.01em;
       color: var(--title);
     }
 
@@ -120,7 +112,6 @@
       display: grid;
       grid-template-columns: 10px 1fr;
       gap: 9px;
-      align-items: start;
     }
 
     .dot {
@@ -142,87 +133,22 @@
     .icon-svg {
       width: 34px;
       height: 34px;
-      display: block;
-      overflow: visible;
-    }
-
-    .stroke-blue {
-      stroke: var(--blue-icon);
-    }
-
-    .stroke-green {
-      stroke: var(--green-icon);
-    }
-
-    .stroke-purple {
-      stroke: var(--purple-icon);
-    }
-
-    .fill-blue {
-      fill: var(--blue-icon);
-    }
-
-    .fill-green {
-      fill: var(--green-icon);
-    }
-
-    .fill-purple {
-      fill: var(--purple-icon);
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <div class="row">
 
-      <!-- Identity & Access -->
-      <section class="card">
+      <div class="card">
         <div class="header">
           <div class="icon-box blue">
-            <svg class="icon-svg" viewBox="0 0 128 128" aria-hidden="true">
-              <defs>
-                <linearGradient id="shieldGrad" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#3a8df3"></stop>
-                  <stop offset="100%" stop-color="#2576e5"></stop>
-                </linearGradient>
-              </defs>
-
-              <path
-                d="M64 18
-                   C78 24, 92 26, 106 27
-                   V54
-                   C106 82, 87 101, 64 110
-                   C41 101, 22 82, 22 54
-                   V27
-                   C36 26, 50 24, 64 18Z"
-                fill="url(#shieldGrad)">
-              </path>
-
-              <circle cx="64" cy="46" r="12" fill="#ffffff"></circle>
-
-              <path
-                d="M43 77
-                   C43 63, 53 57, 64 57
-                   C75 57, 85 63, 85 77
-                   C79 81, 72 83, 64 83
-                   C56 83, 49 81, 43 77Z"
-                fill="#ffffff">
-              </path>
-
-              <circle cx="94" cy="78" r="23" fill="#2f80ed"></circle>
-
-              <path
-                d="M84 78 L91 85 L105 71"
-                fill="none"
-                stroke="#ffffff"
-                stroke-width="7"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-              </path>
+            <svg class="icon-svg" viewBox="0 0 128 128">
+              <path d="M64 18C78 24,92 26,106 27V54C106 82,87 101,64 110C41 101,22 82,22 54V27C36 26,50 24,64 18Z" fill="#2f80ed"/>
             </svg>
           </div>
-
-          <h2>Identity &amp; Access Architecture</h2>
+          <h2>Identity & Access Architecture</h2>
         </div>
 
         <ul class="list">
@@ -230,29 +156,16 @@
           <li><span class="dot"></span><p>Built dynamic group and access models</p></li>
           <li><span class="dot"></span><p>Enforced conditional access policies</p></li>
         </ul>
-      </section>
+      </div>
 
-      <!-- Cloud & Platform -->
-      <section class="card">
+      <div class="card">
         <div class="header">
           <div class="icon-box blue">
-            <svg class="icon-svg" viewBox="0 0 128 128" aria-hidden="true">
-              <g fill="none" class="stroke-blue" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M34 84h34c12 0 20-8 20-18 0-9-7-16-15-17-3-13-14-22-28-22-15 0-28 11-30 25-7 1-12 6-12 13 0 11 9 19 20 19h11"></path>
-                <circle cx="88" cy="80" r="18"></circle>
-                <path d="M88 68v6"></path>
-                <path d="M88 86v6"></path>
-                <path d="M76 80h6"></path>
-                <path d="M94 80h6"></path>
-                <path d="M80 72l4 4"></path>
-                <path d="M92 84l4 4"></path>
-                <path d="M96 72l-4 4"></path>
-                <path d="M84 84l-4 4"></path>
-              </g>
+            <svg class="icon-svg" viewBox="0 0 128 128">
+              <circle cx="64" cy="64" r="40" stroke="#2f80ed" stroke-width="6" fill="none"/>
             </svg>
           </div>
-
-          <h2>Cloud &amp; Platform Engineering</h2>
+          <h2>Cloud & Platform Engineering</h2>
         </div>
 
         <ul class="list">
@@ -260,53 +173,16 @@
           <li><span class="dot"></span><p>Integrated AWS and Microsoft 365</p></li>
           <li><span class="dot"></span><p>Standardized infrastructure</p></li>
         </ul>
-      </section>
+      </div>
 
-      <!-- Automation & Integration -->
-      <section class="card">
+      <div class="card">
         <div class="header">
           <div class="icon-box green">
-            <svg class="icon-svg" viewBox="0 0 128 128" aria-hidden="true">
-              <g fill="none" class="stroke-green" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M36 28c8-8 18-12 30-12 15 0 28 6 38 17"></path>
-                <path d="M100 20l4 12-11 4"></path>
-                <path d="M92 100c-8 8-18 12-30 12-15 0-28-6-38-17"></path>
-                <path d="M28 108l-4-12 11-4"></path>
-              </g>
-
-              <g transform="translate(12,22)">
-                <circle cx="24" cy="46" r="14" fill="#5aa84f"></circle>
-                <circle cx="70" cy="20" r="14" fill="#5aa84f"></circle>
-
-                <g fill="#ffffff">
-                  <circle cx="24" cy="46" r="4.5"></circle>
-                  <circle cx="70" cy="20" r="4.5"></circle>
-                </g>
-
-                <g stroke="#ffffff" stroke-width="4" stroke-linecap="round">
-                  <path d="M24 33v5"></path>
-                  <path d="M24 54v5"></path>
-                  <path d="M11 46h5"></path>
-                  <path d="M32 46h5"></path>
-                  <path d="M15 37l3 3"></path>
-                  <path d="M30 52l3 3"></path>
-                  <path d="M33 37l-3 3"></path>
-                  <path d="M18 52l-3 3"></path>
-
-                  <path d="M70 7v5"></path>
-                  <path d="M70 28v5"></path>
-                  <path d="M57 20h5"></path>
-                  <path d="M78 20h5"></path>
-                  <path d="M61 11l3 3"></path>
-                  <path d="M76 26l3 3"></path>
-                  <path d="M79 11l-3 3"></path>
-                  <path d="M64 26l-3 3"></path>
-                </g>
-              </g>
+            <svg class="icon-svg" viewBox="0 0 128 128">
+              <circle cx="64" cy="64" r="26" fill="#5aa84f"/>
             </svg>
           </div>
-
-          <h2>Automation &amp; Integration</h2>
+          <h2>Automation & Integration</h2>
         </div>
 
         <ul class="list">
@@ -314,30 +190,16 @@
           <li><span class="dot"></span><p>Built Azure Data Factory pipelines</p></li>
           <li><span class="dot"></span><p>Automated provisioning workflows</p></li>
         </ul>
-      </section>
+      </div>
 
-      <!-- Reliability & Optimization -->
-      <section class="card">
+      <div class="card">
         <div class="header">
           <div class="icon-box purple">
-            <svg class="icon-svg" viewBox="0 0 128 128" aria-hidden="true">
-              <g fill="none" class="stroke-purple" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 94h52"></path>
-                <path d="M30 88V62"></path>
-                <path d="M46 88V48"></path>
-                <path d="M62 88V34"></path>
-                <path d="M26 44l16-12 14 8 18-16"></path>
-                <circle cx="26" cy="44" r="3" fill="#6b4df5"></circle>
-                <circle cx="42" cy="32" r="3" fill="#6b4df5"></circle>
-                <circle cx="56" cy="40" r="3" fill="#6b4df5"></circle>
-                <circle cx="74" cy="24" r="3" fill="#6b4df5"></circle>
-                <circle cx="82" cy="78" r="22"></circle>
-                <path d="M96 92l12 12"></path>
-              </g>
+            <svg class="icon-svg" viewBox="0 0 128 128">
+              <circle cx="64" cy="64" r="26" fill="#6b4df5"/>
             </svg>
           </div>
-
-          <h2>Reliability &amp; Optimization</h2>
+          <h2>Reliability & Optimization</h2>
         </div>
 
         <ul class="list">
@@ -345,7 +207,7 @@
           <li><span class="dot"></span><p>Incident response leadership</p></li>
           <li><span class="dot"></span><p>Optimized platform costs</p></li>
         </ul>
-      </section>
+      </div>
 
     </div>
   </div>
