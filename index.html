@@ -19,7 +19,8 @@
     }
 
     body {
-      min-height: 100vh;
+      width: 100%;
+      background: transparent;
     }
 
     .cards-section {
@@ -28,15 +29,18 @@
       background: transparent;
     }
 
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    .cards-row {
+      display: flex;
+      flex-wrap: nowrap;
       gap: 18px;
+      width: 100%;
       align-items: stretch;
     }
 
     .card {
-      height: 300px;
+      flex: 1 1 0;
+      min-width: 0;
+      height: 320px;
       background: #ffffff;
       border: 1px solid #d8deea;
       border-radius: 18px;
@@ -51,7 +55,7 @@
       display: flex;
       align-items: flex-start;
       gap: 16px;
-      min-height: 86px;
+      min-height: 92px;
     }
 
     .icon-wrap {
@@ -112,14 +116,10 @@
       background: #aeb8d7;
     }
 
-    @media (max-width: 640px) {
-      .cards-section {
-        padding: 18px;
-      }
-
+    /* Keep all 4 cards in one straight line while scaling down proportionally */
+    @media (max-width: 1400px) {
       .card {
-        height: auto;
-        min-height: 300px;
+        padding: 20px 20px 18px;
       }
 
       .card-title {
@@ -127,14 +127,90 @@
       }
 
       .card-list li {
+        font-size: 17px;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .cards-section {
+        padding: 18px;
+      }
+
+      .cards-row {
+        gap: 14px;
+      }
+
+      .icon-wrap {
+        flex: 0 0 58px;
+        width: 58px;
+        height: 58px;
+      }
+
+      .icon-wrap svg {
+        width: 58px;
+        height: 58px;
+      }
+
+      .card-header {
+        gap: 12px;
+        min-height: 84px;
+      }
+
+      .card-title {
         font-size: 18px;
+      }
+
+      .card-list li {
+        font-size: 15px;
+        padding-left: 20px;
+      }
+
+      .card-list li::before {
+        width: 8px;
+        height: 8px;
+        top: 8px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .cards-row {
+        gap: 10px;
+      }
+
+      .card {
+        padding: 16px 14px;
+      }
+
+      .icon-wrap {
+        flex: 0 0 50px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .icon-wrap svg {
+        width: 50px;
+        height: 50px;
+      }
+
+      .card-title {
+        font-size: 16px;
+        line-height: 1.3;
+      }
+
+      .card-list {
+        gap: 12px;
+      }
+
+      .card-list li {
+        font-size: 13px;
+        line-height: 1.3;
       }
     }
   </style>
 </head>
 <body>
   <section class="cards-section">
-    <div class="cards-grid">
+    <div class="cards-row">
 
       <!-- Card 1 -->
       <article class="card">
@@ -147,20 +223,12 @@
                   <stop offset="100%" stop-color="#1667db"/>
                 </linearGradient>
               </defs>
-
               <path
-                d="M40 8
-                   C31 14, 22 16, 14 18
-                   V34
-                   C14 51, 25 64, 40 72
-                   C55 64, 66 51, 66 34
-                   V18
-                   C58 16, 49 14, 40 8Z"
+                d="M40 8 C31 14, 22 16, 14 18 V34 C14 51, 25 64, 40 72 C55 64, 66 51, 66 34 V18 C58 16, 49 14, 40 8Z"
                 fill="url(#shieldBlue)"
                 stroke="#0f5ccc"
                 stroke-width="1.5"
               />
-
               <rect x="24" y="31" width="32" height="24" rx="6" fill="#ffffff" opacity="0.98"/>
               <path
                 d="M30 31v-5c0-6 4.8-10 10-10s10 4 10 10v5"
@@ -203,18 +271,15 @@
                   <stop offset="100%" stop-color="#2d7df0"/>
                 </linearGradient>
               </defs>
-
               <path
                 d="M56 30.5c-.5-9.8-8.4-17.5-18.4-17.5-7.7 0-14.5 4.7-17.3 11.7-8 .6-14.3 7.2-14.3 15.4C6 48.9 13.1 56 21.8 56H55c9.4 0 17-7.6 17-17 0-8.8-6.7-16.1-15.9-16.5Z"
                 fill="url(#cloudBlue)"
                 stroke="#2d7df0"
                 stroke-width="1.5"
               />
-
               <rect x="27" y="25" width="28" height="10" rx="3" fill="#ffffff" stroke="#1f6fd6" stroke-width="1.5"/>
               <rect x="27" y="38" width="28" height="10" rx="3" fill="#ffffff" stroke="#1f6fd6" stroke-width="1.5"/>
               <rect x="27" y="51" width="28" height="10" rx="3" fill="#ffffff" stroke="#1f6fd6" stroke-width="1.5"/>
-
               <circle cx="33.5" cy="30" r="1.8" fill="#1f6fd6"/>
               <circle cx="33.5" cy="43" r="1.8" fill="#1f6fd6"/>
               <circle cx="33.5" cy="56" r="1.8" fill="#1f6fd6"/>
@@ -243,7 +308,6 @@
                   <stop offset="100%" stop-color="#279a57"/>
                 </linearGradient>
               </defs>
-
               <path
                 d="M39.8 12
                    l4.9 0.5 2.4 6.2
@@ -261,7 +325,6 @@
                 stroke="#23894d"
                 stroke-width="1.5"
               />
-
               <circle cx="40" cy="42" r="18" fill="#ffffff"/>
               <path d="M30 43a10 10 0 0 0 17 6.7" fill="none" stroke="#279a57" stroke-width="4.5" stroke-linecap="round"/>
               <path d="M50 41a10 10 0 0 0-17-6.7" fill="none" stroke="#279a57" stroke-width="4.5" stroke-linecap="round"/>
@@ -292,19 +355,12 @@
                   <stop offset="100%" stop-color="#4d34d8"/>
                 </linearGradient>
               </defs>
-
               <path
-                d="M40 16
-                   C21.8 16 7 30.8 7 49
-                   v8
-                   c0 4.4 3.6 8 8 8h50
-                   c4.4 0 8-3.6 8-8v-8
-                   C73 30.8 58.2 16 40 16Z"
+                d="M40 16 C21.8 16 7 30.8 7 49 v8 c0 4.4 3.6 8 8 8h50 c4.4 0 8-3.6 8-8v-8 C73 30.8 58.2 16 40 16Z"
                 fill="url(#gaugePurple)"
                 stroke="#4630c9"
                 stroke-width="1.5"
               />
-
               <path
                 d="M18 49c0-12.2 9.8-22 22-22s22 9.8 22 22"
                 fill="none"
@@ -312,10 +368,8 @@
                 stroke-width="4"
                 stroke-linecap="round"
               />
-
               <line x1="40" y1="49" x2="55" y2="40" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
               <circle cx="40" cy="49" r="4.2" fill="#ffffff"/>
-
               <path d="M54 61h10v-10" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M64 51l-9 9" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
             </svg>
