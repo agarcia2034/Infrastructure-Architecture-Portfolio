@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Infrastructure Architecture Portfolio</title>
   <style>
     :root {
-      --page-bg: transparent;
       --card-bg: #ffffff;
-      --card-border: #d6dcea;
-      --divider: #e8ecf4;
+      --card-border: #d7dcea;
+      --divider: #e7ecf4;
       --title: #1d2b4c;
-      --text: #2d3a55;
-      --bullet: #d2d6e1;
-      --shadow: 0 10px 24px rgba(26, 45, 84, 0.08);
+      --text: #2f3b56;
+      --bullet: #d3d8e2;
+      --shadow: 0 8px 22px rgba(26, 45, 84, 0.08);
       --radius: 22px;
 
-      --blue-a: #49b2ff;
-      --blue-b: #1474ea;
-      --green-a: #6dde8f;
-      --green-b: #14a35a;
-      --purple-a: #9372ff;
-      --purple-b: #5a35f0;
+      --blue-a: #4ab4ff;
+      --blue-b: #1675ea;
+      --green-a: #70df91;
+      --green-b: #17a45c;
+      --purple-a: #9574ff;
+      --purple-b: #5b35f1;
     }
 
     * {
@@ -34,24 +30,25 @@
     html,
     body {
       margin: 0;
-      padding: 28px;
+      padding: 0;
+      background: transparent !important;
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: transparent;
+    }
+
+    body {
+      padding: 28px;
     }
 
     .grid {
       width: 100%;
-      max-width: 1520px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: nowrap;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 22px;
       align-items: stretch;
-      background: transparent;
+      background: transparent !important;
     }
 
     .card {
-      flex: 1 1 0;
       min-width: 0;
       background: var(--card-bg);
       border: 1.5px solid var(--card-border);
@@ -78,7 +75,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.28);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28);
+      overflow: hidden;
     }
 
     .icon-wrap.blue {
@@ -86,23 +84,24 @@
     }
 
     .icon-wrap.green {
-      background: radial-gradient(circle at 30% 25%, #88ebb0 0%, var(--green-a) 28%, var(--green-b) 100%);
+      background: radial-gradient(circle at 30% 25%, #89ebb0 0%, var(--green-a) 28%, var(--green-b) 100%);
     }
 
     .icon-wrap.purple {
-      background: radial-gradient(circle at 30% 25%, #ab92ff 0%, var(--purple-a) 28%, var(--purple-b) 100%);
+      background: radial-gradient(circle at 30% 25%, #ac93ff 0%, var(--purple-a) 28%, var(--purple-b) 100%);
     }
 
     .icon-svg {
       width: 60px;
       height: 60px;
       display: block;
+      flex: 0 0 auto;
     }
 
     h2 {
       margin: 0;
       color: var(--title);
-      font-size: 25px;
+      font-size: clamp(17px, 1.45vw, 25px);
       line-height: 1.22;
       font-weight: 800;
       letter-spacing: -0.03em;
@@ -129,13 +128,13 @@
       height: 16px;
       border-radius: 50%;
       background: var(--bullet);
-      margin-top: 9px;
+      margin-top: 8px;
     }
 
     p {
       margin: 0;
       color: var(--text);
-      font-size: 19px;
+      font-size: clamp(14px, 1.08vw, 19px);
       line-height: 1.42;
       font-weight: 500;
       letter-spacing: -0.02em;
@@ -143,11 +142,44 @@
 
     @media (max-width: 1200px) {
       body {
-        overflow-x: auto;
+        padding: 20px;
       }
 
       .grid {
-        min-width: 1460px;
+        gap: 16px;
+      }
+
+      .card {
+        padding: 20px 20px 24px;
+        min-height: 400px;
+      }
+
+      .header {
+        grid-template-columns: 78px minmax(0, 1fr);
+        column-gap: 14px;
+        padding-bottom: 18px;
+        margin-bottom: 18px;
+      }
+
+      .icon-wrap {
+        width: 68px;
+        height: 68px;
+      }
+
+      .icon-svg {
+        width: 48px;
+        height: 48px;
+      }
+
+      li {
+        grid-template-columns: 14px minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      .dot {
+        width: 14px;
+        height: 14px;
+        margin-top: 7px;
       }
     }
   </style>
@@ -263,323 +295,6 @@
         <li><span class="dot"></span><p>Reduced infrastructure costs</p></li>
       </ul>
     </section>
-  </div>
-</body>
-</html>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Infrastructure Architecture Portfolio</title>
-
-  <style>
-    :root {
-      --card-bg: #ffffff;
-      --card-border: #d9d9d9;
-      --title: #172847;
-      --text: #374151;
-      --bullet: #b8b8b8;
-
-      --blue-bg: #dfeafa;
-      --blue-icon: #2f80ed;
-
-      --green-bg: #e2f0df;
-      --green-icon: #5aa84f;
-
-      --purple-bg: #eadffd;
-      --purple-icon: #6b4df5;
-
-      --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      --radius: 16px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      background: transparent;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    body {
-      display: flex;
-      justify-content: center;
-      padding: 12px;
-    }
-
-    .page {
-      width: 100%;
-      max-width: 1200px;
-    }
-
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .card {
-      flex: 1 1 220px;
-      min-width: 200px;
-      max-width: 260px;
-      min-height: 200px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 16px;
-    }
-
-    .header {
-      display: grid;
-      grid-template-columns: 56px 1fr;
-      gap: 12px;
-      align-items: start;
-      margin-bottom: 14px;
-    }
-
-    .icon-box {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 0 0 auto;
-    }
-
-    .icon-box.blue { background: var(--blue-bg); }
-    .icon-box.green { background: var(--green-bg); }
-    .icon-box.purple { background: var(--purple-bg); }
-
-    h2 {
-      margin: 2px 0 0;
-      font-size: 13px;
-      line-height: 1.15;
-      font-weight: 800;
-      color: var(--title);
-    }
-
-    .list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .list li {
-      display: grid;
-      grid-template-columns: 10px 1fr;
-      gap: 9px;
-      align-items: start;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--bullet);
-      margin-top: 5px;
-    }
-
-    .list p {
-      margin: 0;
-      font-size: 11px;
-      line-height: 1.35;
-      font-weight: 500;
-      color: var(--text);
-    }
-
-    .icon-svg {
-      width: 34px;
-      height: 34px;
-      display: block;
-      overflow: visible;
-      flex: 0 0 auto;
-    }
-  </style>
-</head>
-<body>
-  <div class="page">
-    <div class="row">
-
-      <!-- Identity & Access -->
-      <section class="card">
-        <div class="header">
-          <div class="icon-box blue">
-            <svg class="icon-svg" viewBox="0 0 128 128" aria-hidden="true">
-              <defs>
-                <linearGradient id="shieldGrad" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#3a8df3"></stop>
-                  <stop offset="100%" stop-color="#2576e5"></stop>
-                </linearGradient>
-              </defs>
-
-              <path
-                d="M64 18
-                   C78 24, 92 26, 106 27
-                   V54
-                   C106 82, 87 101, 64 110
-                   C41 101, 22 82, 22 54
-                   V27
-                   C36 26, 50 24, 64 18Z"
-                fill="url(#shieldGrad)">
-              </path>
-
-              <circle cx="64" cy="46" r="12" fill="#ffffff"></circle>
-
-              <path
-                d="M43 77
-                   C43 63, 53 57, 64 57
-                   C75 57, 85 63, 85 77
-                   C79 81, 72 83, 64 83
-                   C56 83, 49 81, 43 77Z"
-                fill="#ffffff">
-              </path>
-
-              <circle cx="94" cy="78" r="23" fill="#2f80ed"></circle>
-
-              <path
-                d="M84 78 L91 85 L105 71"
-                fill="none"
-                stroke="#ffffff"
-                stroke-width="7"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-              </path>
-            </svg>
-          </div>
-
-          <h2>Identity &amp; Access Architecture</h2>
-        </div>
-
-        <ul class="list">
-          <li><span class="dot"></span><p>Designed identity lifecycle automation</p></li>
-          <li><span class="dot"></span><p>Built dynamic group and access models</p></li>
-          <li><span class="dot"></span><p>Enforced conditional access policies</p></li>
-        </ul>
-      </section>
-
-      <!-- Cloud & Platform -->
-      <section class="card">
-        <div class="header">
-          <div class="icon-box blue">
-            <svg class="icon-svg" viewBox="0 0 128 128" aria-hidden="true">
-              <g fill="none" stroke="#2f80ed" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M34 84h34c12 0 20-8 20-18 0-9-7-16-15-17-3-13-14-22-28-22-15 0-28 11-30 25-7 1-12 6-12 13 0 11 9 19 20 19h11"></path>
-                <circle cx="88" cy="80" r="18"></circle>
-                <path d="M88 68v6"></path>
-                <path d="M88 86v6"></path>
-                <path d="M76 80h6"></path>
-                <path d="M94 80h6"></path>
-                <path d="M80 72l4 4"></path>
-                <path d="M92 84l4 4"></path>
-                <path d="M96 72l-4 4"></path>
-                <path d="M84 84l-4 4"></path>
-              </g>
-            </svg>
-          </div>
-
-          <h2>Cloud &amp; Platform Engineering</h2>
-        </div>
-
-        <ul class="list">
-          <li><span class="dot"></span><p>Architected Azure and SaaS environments</p></li>
-          <li><span class="dot"></span><p>Integrated AWS and Microsoft 365</p></li>
-          <li><span class="dot"></span><p>Standardized infrastructure</p></li>
-        </ul>
-      </section>
-
-      <!-- Automation & Integration -->
-      <section class="card">
-        <div class="header">
-          <div class="icon-box green">
-            <svg class="icon-svg" viewBox="0 0 128 128" aria-hidden="true">
-              <g fill="none" stroke="#5aa84f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M36 28c8-8 18-12 30-12 15 0 28 6 38 17"></path>
-                <path d="M100 20l4 12-11 4"></path>
-                <path d="M92 100c-8 8-18 12-30 12-15 0-28-6-38-17"></path>
-                <path d="M28 108l-4-12 11-4"></path>
-              </g>
-
-              <g transform="translate(12,22)">
-                <circle cx="24" cy="46" r="14" fill="#5aa84f"></circle>
-                <circle cx="70" cy="20" r="14" fill="#5aa84f"></circle>
-
-                <g fill="#ffffff">
-                  <circle cx="24" cy="46" r="4.5"></circle>
-                  <circle cx="70" cy="20" r="4.5"></circle>
-                </g>
-
-                <g stroke="#ffffff" stroke-width="4" stroke-linecap="round">
-                  <path d="M24 33v5"></path>
-                  <path d="M24 54v5"></path>
-                  <path d="M11 46h5"></path>
-                  <path d="M32 46h5"></path>
-                  <path d="M15 37l3 3"></path>
-                  <path d="M30 52l3 3"></path>
-                  <path d="M33 37l-3 3"></path>
-                  <path d="M18 52l-3 3"></path>
-
-                  <path d="M70 7v5"></path>
-                  <path d="M70 28v5"></path>
-                  <path d="M57 20h5"></path>
-                  <path d="M78 20h5"></path>
-                  <path d="M61 11l3 3"></path>
-                  <path d="M76 26l3 3"></path>
-                  <path d="M79 11l-3 3"></path>
-                  <path d="M64 26l-3 3"></path>
-                </g>
-              </g>
-            </svg>
-          </div>
-
-          <h2>Automation &amp; Integration</h2>
-        </div>
-
-        <ul class="list">
-          <li><span class="dot"></span><p>Terraform and PowerShell automation</p></li>
-          <li><span class="dot"></span><p>Built Azure Data Factory pipelines</p></li>
-          <li><span class="dot"></span><p>Automated provisioning workflows</p></li>
-        </ul>
-      </section>
-
-      <!-- Reliability & Optimization -->
-      <section class="card">
-        <div class="header">
-          <div class="icon-box purple">
-            <svg class="icon-svg" viewBox="0 0 128 128" aria-hidden="true">
-              <g fill="none" stroke="#6b4df5" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 94h52"></path>
-                <path d="M30 88V62"></path>
-                <path d="M46 88V48"></path>
-                <path d="M62 88V34"></path>
-                <path d="M26 44l16-12 14 8 18-16"></path>
-                <circle cx="26" cy="44" r="3" fill="#6b4df5"></circle>
-                <circle cx="42" cy="32" r="3" fill="#6b4df5"></circle>
-                <circle cx="56" cy="40" r="3" fill="#6b4df5"></circle>
-                <circle cx="74" cy="24" r="3" fill="#6b4df5"></circle>
-                <circle cx="82" cy="78" r="22"></circle>
-                <path d="M96 92l12 12"></path>
-              </g>
-            </svg>
-          </div>
-
-          <h2>Reliability &amp; Optimization</h2>
-        </div>
-
-        <ul class="list">
-          <li><span class="dot"></span><p>Monitoring with Grafana</p></li>
-          <li><span class="dot"></span><p>Incident response leadership</p></li>
-          <li><span class="dot"></span><p>Optimized platform costs</p></li>
-        </ul>
-      </section>
-
-    </div>
   </div>
 </body>
 </html>
