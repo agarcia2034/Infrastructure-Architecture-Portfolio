@@ -1,0 +1,185 @@
+<section class="platform-marquee">
+  <div class="platform-track">
+
+    <div class="platform-pill azure">
+      <span class="icon">☁️</span>
+      <span>Microsoft Entra ID</span>
+    </div>
+
+    <div class="platform-pill azure">
+      <span class="icon">🔷</span>
+      <span>Microsoft Azure</span>
+    </div>
+
+    <div class="platform-pill intune">
+      <span class="icon">💻</span>
+      <span>Intune / Autopilot</span>
+    </div>
+
+    <div class="platform-pill devops">
+      <span class="icon">🔄</span>
+      <span>Azure DevOps</span>
+    </div>
+
+    <div class="platform-pill terraform">
+      <span class="icon">⬢</span>
+      <span>Terraform</span>
+    </div>
+
+    <div class="platform-pill powershell">
+      <span class="icon">❯</span>
+      <span>PowerShell</span>
+    </div>
+
+    <div class="platform-pill datafactory">
+      <span class="icon">🏭</span>
+      <span>Azure Data Factory</span>
+    </div>
+
+    <div class="platform-pill aws">
+      <span class="icon">🟧</span>
+      <span>AWS S3</span>
+    </div>
+
+    <div class="platform-pill powerbi">
+      <span class="icon">📊</span>
+      <span>Power BI</span>
+    </div>
+
+    <div class="platform-pill defender">
+      <span class="icon">🛡️</span>
+      <span>Microsoft Defender Suite</span>
+    </div>
+
+    <div class="platform-pill google">
+      <span class="icon">G</span>
+      <span>Google Workspace</span>
+    </div>
+
+    <div class="platform-pill salesforce">
+      <span class="icon">☁</span>
+      <span>Salesforce</span>
+    </div>
+
+    <!-- Duplicate Set for Infinite Loop -->
+    <div class="platform-pill azure">
+      <span class="icon">☁️</span>
+      <span>Microsoft Entra ID</span>
+    </div>
+
+    <div class="platform-pill azure">
+      <span class="icon">🔷</span>
+      <span>Microsoft Azure</span>
+    </div>
+
+    <div class="platform-pill intune">
+      <span class="icon">💻</span>
+      <span>Intune / Autopilot</span>
+    </div>
+
+    <div class="platform-pill devops">
+      <span class="icon">🔄</span>
+      <span>Azure DevOps</span>
+    </div>
+
+    <div class="platform-pill terraform">
+      <span class="icon">⬢</span>
+      <span>Terraform</span>
+    </div>
+
+    <div class="platform-pill powershell">
+      <span class="icon">❯</span>
+      <span>PowerShell</span>
+    </div>
+
+    <div class="platform-pill datafactory">
+      <span class="icon">🏭</span>
+      <span>Azure Data Factory</span>
+    </div>
+
+    <div class="platform-pill aws">
+      <span class="icon">🟧</span>
+      <span>AWS S3</span>
+    </div>
+
+    <div class="platform-pill powerbi">
+      <span class="icon">📊</span>
+      <span>Power BI</span>
+    </div>
+
+    <div class="platform-pill defender">
+      <span class="icon">🛡️</span>
+      <span>Microsoft Defender Suite</span>
+    </div>
+
+    <div class="platform-pill google">
+      <span class="icon">G</span>
+      <span>Google Workspace</span>
+    </div>
+
+    <div class="platform-pill salesforce">
+      <span class="icon">☁</span>
+      <span>Salesforce</span>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.platform-marquee {
+  width: 100%;
+  overflow: hidden;
+  padding: 12px 0;
+  background: transparent;
+}
+
+.platform-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: scrollLeft 38s linear infinite;
+}
+
+.platform-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: #ffffff;
+  border: 1px solid #d9e1ec;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.platform-pill .icon {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.azure .icon { color: #0078d4; }
+.intune .icon { color: #2563eb; }
+.devops .icon { color: #0078d4; }
+.terraform .icon { color: #7b42f6; }
+.powershell .icon { color: #2563eb; }
+.datafactory .icon { color: #0078d4; }
+.aws .icon { color: #ff9900; }
+.powerbi .icon { color: #f2c811; }
+.defender .icon { color: #2563eb; }
+.google .icon { color: #4285f4; }
+.salesforce .icon { color: #00a1e0; }
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+</style>
