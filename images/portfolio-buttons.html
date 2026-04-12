@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio Buttons</title>
+
+<style>
+  body {
+    margin: 0;
+    background: transparent;
+    font-family: Inter, Arial, sans-serif;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 14px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    background: transparent;
+  }
+
+  .portfolio-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    box-shadow:
+      0 4px 12px rgba(0,0,0,0.08),
+      0 1px 3px rgba(0,0,0,0.04);
+    backdrop-filter: blur(6px);
+    white-space: nowrap;
+  }
+
+  .portfolio-btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  .linkedin-btn {
+    background: #0A66C2;
+    color: white;
+  }
+
+  .linkedin-btn:hover {
+    background: #004182;
+    transform: translateY(-1px);
+  }
+
+  .resume-btn {
+    background: #111827;
+    color: white;
+  }
+
+  .resume-btn:hover {
+    background: #1F2937;
+    transform: translateY(-1px);
+  }
+</style>
+</head>
+<body>
+
+<div class="button-container">
+
+  <a
+    class="portfolio-btn linkedin-btn"
+    href="https://www.linkedin.com/in/andiegarcia01/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM.5 8h4V24h-4V8zm7 0h3.8v2.2h.1c.5-.95 1.8-2.2 3.7-2.2 4 0 4.7 2.6 4.7 6V24h-4v-8.4c0-2-.04-4.6-2.8-4.6-2.8 0-3.2 2.2-3.2 4.4V24h-4V8z"/>
+    </svg>
+    LinkedIn Profile
+  </a>
+
+  <a
+    class="portfolio-btn resume-btn"
+    href="https://1drv.ms/w/c/4fd0108d061be204/IQAK2m_L4J3wTom0zA7Rfu2xAZ5tZtRuaISZ81TcQw67n4E?e=qEp1Ij"
+    download
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 16L7 11h3V4h4v7h3l-5 5zm-8 4v-2h16v2H4z"/>
+    </svg>
+    Download Resume
+  </a>
+
+</div>
+
+</body>
+</html>
