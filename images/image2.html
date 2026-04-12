@@ -19,14 +19,14 @@ html,body{
 
 .metrics-section{
     width:100%;
-    padding:28px;
+    padding:20px;
     background:transparent;
 }
 
 .metrics-row{
     display:flex;
     flex-wrap:nowrap;
-    gap:20px;
+    gap:14px;
     width:100%;
     align-items:stretch;
 }
@@ -34,12 +34,12 @@ html,body{
 .metric-card{
     flex:1 1 0;
     min-width:0;
-    height:200px;
-    background:#fff;
+    height:140px;
+    background:#ffffff;
     border:1px solid #d7ddeb;
-    border-radius:18px;
-    box-shadow:0 6px 18px rgba(30,41,59,.08);
-    padding:18px 16px;
+    border-radius:13px;
+    box-shadow:0 4px 12px rgba(30,41,59,.08);
+    padding:12px 10px;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -48,9 +48,9 @@ html,body{
 }
 
 .metric-icon{
-    width:62px;
-    height:62px;
-    margin-bottom:14px;
+    width:43px;
+    height:43px;
+    margin-bottom:10px;
     flex-shrink:0;
 }
 
@@ -61,56 +61,74 @@ html,body{
 }
 
 .metric-value{
-    font-size:42px;
+    font-size:29px;
     font-weight:700;
     line-height:1;
     color:#1e293b;
-    margin-bottom:10px;
+    margin-bottom:7px;
     letter-spacing:-0.03em;
 }
 
 .metric-label{
-    font-size:17px;
-    line-height:1.35;
+    font-size:12px;
+    line-height:1.3;
     font-weight:500;
     color:#1f2937;
+    max-width:92%;
+}
+
+.metric-value.green{
+    color:#1F8A4C;
 }
 
 @media (max-width:1200px){
+    .metrics-row{
+        gap:10px;
+    }
+
     .metric-card{
-        padding:16px 12px;
-    }
-
-    .metric-value{
-        font-size:34px;
-    }
-
-    .metric-label{
-        font-size:15px;
+        padding:10px 8px;
     }
 
     .metric-icon{
-        width:54px;
-        height:54px;
+        width:38px;
+        height:38px;
+        margin-bottom:8px;
+    }
+
+    .metric-value{
+        font-size:25px;
+        margin-bottom:6px;
+    }
+
+    .metric-label{
+        font-size:11px;
     }
 }
 
 @media (max-width:900px){
     .metrics-row{
-        gap:12px;
+        gap:8px;
     }
 
-    .metric-value{
-        font-size:28px;
-    }
-
-    .metric-label{
-        font-size:13px;
+    .metric-card{
+        padding:8px 6px;
     }
 
     .metric-icon{
-        width:46px;
-        height:46px;
+        width:34px;
+        height:34px;
+        margin-bottom:6px;
+    }
+
+    .metric-value{
+        font-size:21px;
+        margin-bottom:5px;
+    }
+
+    .metric-label{
+        font-size:10px;
+        line-height:1.25;
     }
 }
 </style>
@@ -122,17 +140,23 @@ html,body{
 
         <!-- Card 1 -->
         <div class="metric-card">
-            <div class="metric-icon">
-                <svg viewBox="0 0 64 64">
-                    <rect x="8" y="10" width="40" height="44" rx="6" fill="#2F80ED"/>
+            <div class="metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="flowBlue" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#4EA0FF"/>
+                            <stop offset="100%" stop-color="#1D63D2"/>
+                        </linearGradient>
+                    </defs>
+                    <rect x="8" y="10" width="40" height="44" rx="6" fill="url(#flowBlue)" stroke="#1859BE" stroke-width="1.5"/>
                     <circle cx="18" cy="22" r="6" fill="#fff"/>
                     <circle cx="18" cy="38" r="6" fill="#fff"/>
-                    <path d="M15 22l2 2 4-5" stroke="#2F80ED" stroke-width="2.5" fill="none"/>
-                    <path d="M15 38l2 2 4-5" stroke="#2F80ED" stroke-width="2.5" fill="none"/>
+                    <path d="M15 22l2 2 4-5" stroke="#2F80ED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15 38l2 2 4-5" stroke="#2F80ED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M30 18h14M30 34h14" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
                     <path d="M40 14l6 4-6 4M40 30l6 4-6 4" fill="#fff"/>
-                    <path d="M48 38h10" stroke="#2F80ED" stroke-width="5" stroke-linecap="round"/>
-                    <path d="M54 32l8 6-8 6" fill="#2F80ED"/>
+                    <path d="M48 38h10" stroke="#1D63D2" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M54 32l8 6-8 6" fill="#1D63D2"/>
                 </svg>
             </div>
             <div class="metric-value">600+</div>
@@ -141,13 +165,24 @@ html,body{
 
         <!-- Card 2 -->
         <div class="metric-card">
-            <div class="metric-icon">
-                <svg viewBox="0 0 64 64">
-                    <rect x="8" y="12" width="36" height="26" rx="3" fill="#2F80ED"/>
-                    <rect x="12" y="16" width="28" height="18" fill="#DCEBFA"/>
+            <div class="metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="deviceBlue" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#55A8FF"/>
+                            <stop offset="100%" stop-color="#2A74DB"/>
+                        </linearGradient>
+                        <linearGradient id="screenFill" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#C9DAEB"/>
+                            <stop offset="100%" stop-color="#AFC5DE"/>
+                        </linearGradient>
+                    </defs>
+                    <rect x="8" y="12" width="36" height="26" rx="3" fill="url(#deviceBlue)" stroke="#1E66C8" stroke-width="1.5"/>
+                    <rect x="12" y="16" width="28" height="18" fill="url(#screenFill)"/>
                     <rect x="5" y="40" width="42" height="5" rx="2" fill="#2F80ED"/>
-                    <rect x="36" y="22" width="14" height="28" rx="3" fill="#2F80ED"/>
+                    <rect x="36" y="22" width="14" height="28" rx="3" fill="url(#deviceBlue)" stroke="#1E66C8" stroke-width="1.5"/>
                     <rect x="39" y="26" width="8" height="18" fill="#DCEBFA"/>
+                    <rect x="41.5" y="45" width="3" height="1.5" rx=".75" fill="#ffffff"/>
                 </svg>
             </div>
             <div class="metric-value">500+</div>
@@ -156,16 +191,18 @@ html,body{
 
         <!-- Card 3 -->
         <div class="metric-card">
-            <div class="metric-icon">
-                <svg viewBox="0 0 64 64">
-                    <circle cx="32" cy="32" r="10" fill="#38A169"/>
-                    <circle cx="14" cy="14" r="8" fill="#56CCF2"/>
-                    <circle cx="50" cy="14" r="8" fill="#48BB78"/>
-                    <circle cx="48" cy="48" r="8" fill="#3182CE"/>
-                    <line x1="22" y1="20" x2="27" y2="26" stroke="#38A169" stroke-width="4"/>
-                    <line x1="42" y1="20" x2="37" y2="26" stroke="#38A169" stroke-width="4"/>
-                    <line x1="40" y1="38" x2="44" y2="43" stroke="#38A169" stroke-width="4"/>
-                    <circle cx="32" cy="32" r="20" fill="none" stroke="#B2E3E7" stroke-width="4"/>
+            <div class="metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="32" cy="32" r="10" fill="#43A86F"/>
+                    <circle cx="14" cy="14" r="8" fill="#55BDF2"/>
+                    <circle cx="50" cy="14" r="8" fill="#4CB774"/>
+                    <circle cx="48" cy="48" r="8" fill="#3290D3"/>
+                    <line x1="22" y1="20" x2="27" y2="26" stroke="#38A169" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="42" y1="20" x2="37" y2="26" stroke="#38A169" stroke-width="4" stroke-linecap="round"/>
+                    <line x1="40" y1="38" x2="44" y2="43" stroke="#38A169" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M31 9a23 23 0 0 1 12 3" fill="none" stroke="#B2E3E7" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M53 22a23 23 0 0 1 0 20" fill="none" stroke="#B2E3E7" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M19 53A23 23 0 0 1 10 22" fill="none" stroke="#76C2D8" stroke-width="4" stroke-linecap="round"/>
                 </svg>
             </div>
             <div class="metric-value">10+</div>
@@ -174,9 +211,15 @@ html,body{
 
         <!-- Card 4 -->
         <div class="metric-card">
-            <div class="metric-icon">
-                <svg viewBox="0 0 64 64">
-                    <circle cx="32" cy="32" r="26" fill="#2FA866"/>
+            <div class="metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="checkGreen" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#55BB77"/>
+                            <stop offset="100%" stop-color="#238D52"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="32" cy="32" r="26" fill="url(#checkGreen)" stroke="#197948" stroke-width="1.5"/>
                     <circle cx="32" cy="32" r="18" fill="none" stroke="#fff" stroke-width="4"/>
                     <path d="M22 32l7 7 14-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
@@ -187,15 +230,22 @@ html,body{
 
         <!-- Card 5 -->
         <div class="metric-card">
-            <div class="metric-icon">
-                <svg viewBox="0 0 64 64">
-                    <circle cx="32" cy="32" r="26" fill="#F2B84B"/>
-                    <text x="32" y="30" text-anchor="middle" font-size="28" font-weight="700" fill="#fff">$</text>
-                    <path d="M44 36v12" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M38 44l6 7 6-7" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+            <div class="metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="costOrange" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#F6C55A"/>
+                            <stop offset="100%" stop-color="#E8A132"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="32" cy="32" r="26" fill="url(#costOrange)" stroke="#D88F1D" stroke-width="1.5"/>
+                    <path d="M35 13.5c-1.3-.5-2.6-.8-4-.8-5 0-8.5 2.7-8.5 6.8 0 3.2 2 5.2 6.4 6.5l2.6.8c2.6.8 3.5 1.7 3.5 3.4 0 2.1-1.9 3.5-4.8 3.5-2.5 0-4.7-.7-6.6-2.1" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+                    <path d="M31 10v28" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+                    <path d="M45 34v12" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M39 42l6 7 6-7" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </div>
-            <div class="metric-value" style="color:#1F8A4C;">25%</div>
+            <div class="metric-value green">25%</div>
             <div class="metric-label">Licensing cost reduction</div>
         </div>
 
