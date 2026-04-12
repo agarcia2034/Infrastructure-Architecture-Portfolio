@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infrastructure Capability Cards</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #1f2937;
+    }
+
+    body {
+      width: 100%;
+      background: transparent;
+    }
+
+    .cards-section {
+      width: 100%;
+      padding: 28px;
+      background: transparent;
+    }
+
+    .cards-row {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 18px;
+      width: 100%;
+      align-items: stretch;
+    }
+
+    .card {
+      flex: 1 1 0;
+      min-width: 0;
+      height: 320px;
+      background: #ffffff;
+      border: 1px solid #d8deea;
+      border-radius: 18px;
+      box-shadow: 0 6px 16px rgba(28, 43, 75, 0.08);
+      padding: 22px 24px 20px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      min-height: 92px;
+    }
+
+    .icon-wrap {
+      flex: 0 0 70px;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-wrap svg {
+      width: 70px;
+      height: 70px;
+      display: block;
+    }
+
+    .card-title {
+      margin: 6px 0 0;
+      font-size: 22px;
+      line-height: 1.35;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #111827;
+    }
+
+    .divider {
+      margin: 14px 0 16px;
+      border: 0;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .card-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 16px;
+    }
+
+    .card-list li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 19px;
+      line-height: 1.35;
+      font-weight: 500;
+      color: #1f2937;
+    }
+
+    .card-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #aeb8d7;
+    }
+
+    /* Keep all 4 cards in one straight line while scaling down proportionally */
+    @media (max-width: 1400px) {
+      .card {
+        padding: 20px 20px 18px;
+      }
+
+      .card-title {
+        font-size: 20px;
+      }
+
+      .card-list li {
+        font-size: 17px;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .cards-section {
+        padding: 18px;
+      }
+
+      .cards-row {
+        gap: 14px;
+      }
+
+      .icon-wrap {
+        flex: 0 0 58px;
+        width: 58px;
+        height: 58px;
+      }
+
+      .icon-wrap svg {
+        width: 58px;
+        height: 58px;
+      }
+
+      .card-header {
+        gap: 12px;
+        min-height: 84px;
+      }
+
+      .card-title {
+        font-size: 18px;
+      }
+
+      .card-list li {
+        font-size: 15px;
+        padding-left: 20px;
+      }
+
+      .card-list li::before {
+        width: 8px;
+        height: 8px;
+        top: 8px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .cards-row {
+        gap: 10px;
+      }
+
+      .card {
+        padding: 16px 14px;
+      }
+
+      .icon-wrap {
+        flex: 0 0 50px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .icon-wrap svg {
+        width: 50px;
+        height: 50px;
+      }
+
+      .card-title {
+        font-size: 16px;
+        line-height: 1.3;
+      }
+
+      .card-list {
+        gap: 12px;
+      }
+
+      .card-list li {
+        font-size: 13px;
+        line-height: 1.3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="cards-section">
+    <div class="cards-row">
+
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="card-header">
+          <div class="icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <linearGradient id="shieldBlue" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#42a5ff"/>
+                  <stop offset="100%" stop-color="#1667db"/>
+                </linearGradient>
+              </defs>
+              <path
+                d="M40 8 C31 14, 22 16, 14 18 V34 C14 51, 25 64, 40 72 C55 64, 66 51, 66 34 V18 C58 16, 49 14, 40 8Z"
+                fill="url(#shieldBlue)"
+                stroke="#0f5ccc"
+                stroke-width="1.5"
+              />
+              <rect x="24" y="31" width="32" height="24" rx="6" fill="#ffffff" opacity="0.98"/>
+              <path
+                d="M30 31v-5c0-6 4.8-10 10-10s10 4 10 10v5"
+                fill="none"
+                stroke="#ffffff"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M30 31v-5c0-6 4.8-10 10-10s10 4 10 10v5"
+                fill="none"
+                stroke="#d9efff"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <circle cx="40" cy="42" r="3.3" fill="#1667db"/>
+              <rect x="38.5" y="44.5" width="3" height="7.5" rx="1.5" fill="#1667db"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Identity &amp; Access Architecture</h3>
+        </div>
+
+        <hr class="divider" />
+
+        <ul class="card-list">
+          <li>Designed identity automation architecture</li>
+          <li>Built scalable access frameworks</li>
+          <li>Enforced security access policies</li>
+        </ul>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="card-header">
+          <div class="icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <linearGradient id="cloudBlue" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#67c1ff"/>
+                  <stop offset="100%" stop-color="#2d7df0"/>
+                </linearGradient>
+              </defs>
+              <path
+                d="M56 30.5c-.5-9.8-8.4-17.5-18.4-17.5-7.7 0-14.5 4.7-17.3 11.7-8 .6-14.3 7.2-14.3 15.4C6 48.9 13.1 56 21.8 56H55c9.4 0 17-7.6 17-17 0-8.8-6.7-16.1-15.9-16.5Z"
+                fill="url(#cloudBlue)"
+                stroke="#2d7df0"
+                stroke-width="1.5"
+              />
+              <rect x="27" y="25" width="28" height="10" rx="3" fill="#ffffff" stroke="#1f6fd6" stroke-width="1.5"/>
+              <rect x="27" y="38" width="28" height="10" rx="3" fill="#ffffff" stroke="#1f6fd6" stroke-width="1.5"/>
+              <rect x="27" y="51" width="28" height="10" rx="3" fill="#ffffff" stroke="#1f6fd6" stroke-width="1.5"/>
+              <circle cx="33.5" cy="30" r="1.8" fill="#1f6fd6"/>
+              <circle cx="33.5" cy="43" r="1.8" fill="#1f6fd6"/>
+              <circle cx="33.5" cy="56" r="1.8" fill="#1f6fd6"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Cloud &amp; Platform Engineering</h3>
+        </div>
+
+        <hr class="divider" />
+
+        <ul class="card-list">
+          <li>Designed Azure cloud architecture</li>
+          <li>Integrated enterprise SaaS platforms</li>
+          <li>Standardized platform architecture</li>
+        </ul>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="card-header">
+          <div class="icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <linearGradient id="gearGreen" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#66cb79"/>
+                  <stop offset="100%" stop-color="#279a57"/>
+                </linearGradient>
+              </defs>
+              <path
+                d="M39.8 12
+                   l4.9 0.5 2.4 6.2
+                   c2.2 0.6 4.3 1.5 6.2 2.6
+                   l6-2.9 3.5 3.5-2.9 6
+                   c1.2 1.9 2 4 2.6 6.2l6.2 2.4
+                   0.5 4.9-0.5 4.9-6.2 2.4
+                   c-0.6 2.2-1.5 4.3-2.6 6.2l2.9 6-3.5 3.5-6-2.9
+                   c-1.9 1.2-4 2-6.2 2.6l-2.4 6.2-4.9 0.5-4.9-0.5-2.4-6.2
+                   c-2.2-0.6-4.3-1.5-6.2-2.6l-6 2.9-3.5-3.5 2.9-6
+                   c-1.2-1.9-2-4-2.6-6.2L11 46.9l-0.5-4.9 0.5-4.9 6.2-2.4
+                   c0.6-2.2 1.5-4.3 2.6-6.2l-2.9-6 3.5-3.5 6 2.9
+                   c1.9-1.2 4-2 6.2-2.6l2.4-6.2 4.9-0.5Z"
+                fill="url(#gearGreen)"
+                stroke="#23894d"
+                stroke-width="1.5"
+              />
+              <circle cx="40" cy="42" r="18" fill="#ffffff"/>
+              <path d="M30 43a10 10 0 0 0 17 6.7" fill="none" stroke="#279a57" stroke-width="4.5" stroke-linecap="round"/>
+              <path d="M50 41a10 10 0 0 0-17-6.7" fill="none" stroke="#279a57" stroke-width="4.5" stroke-linecap="round"/>
+              <path d="M49 49l8-1-1 8" fill="none" stroke="#279a57" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M31 35l-8 1 1-8" fill="none" stroke="#279a57" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Automation &amp; Integration</h3>
+        </div>
+
+        <hr class="divider" />
+
+        <ul class="card-list">
+          <li>Engineered deployment automation</li>
+          <li>Built enterprise data pipelines</li>
+          <li>Automated provisioning processes</li>
+        </ul>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <div class="card-header">
+          <div class="icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" role="img">
+              <defs>
+                <linearGradient id="gaugePurple" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#7b5cff"/>
+                  <stop offset="100%" stop-color="#4d34d8"/>
+                </linearGradient>
+              </defs>
+              <path
+                d="M40 16 C21.8 16 7 30.8 7 49 v8 c0 4.4 3.6 8 8 8h50 c4.4 0 8-3.6 8-8v-8 C73 30.8 58.2 16 40 16Z"
+                fill="url(#gaugePurple)"
+                stroke="#4630c9"
+                stroke-width="1.5"
+              />
+              <path
+                d="M18 49c0-12.2 9.8-22 22-22s22 9.8 22 22"
+                fill="none"
+                stroke="#ffffff"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <line x1="40" y1="49" x2="55" y2="40" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+              <circle cx="40" cy="49" r="4.2" fill="#ffffff"/>
+              <path d="M54 61h10v-10" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M64 51l-9 9" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Reliability &amp; Optimization</h3>
+        </div>
+
+        <hr class="divider" />
+
+        <ul class="card-list">
+          <li>Implemented platform observability</li>
+          <li>Directed incident remediation</li>
+          <li>Reduced infrastructure costs</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+</body>
+</html>

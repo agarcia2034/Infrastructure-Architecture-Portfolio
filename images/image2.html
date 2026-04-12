@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Metrics Cards</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    background:transparent;
+    font-family:Inter, "Segoe UI", sans-serif;
+}
+
+.metrics-section{
+    width:100%;
+    padding:28px;
+    background:transparent;
+}
+
+.metrics-row{
+    display:flex;
+    flex-wrap:nowrap;
+    gap:20px;
+    width:100%;
+    align-items:stretch;
+}
+
+.metric-card{
+    flex:1 1 0;
+    min-width:0;
+    height:200px;
+    background:#fff;
+    border:1px solid #d7ddeb;
+    border-radius:18px;
+    box-shadow:0 6px 18px rgba(30,41,59,.08);
+    padding:18px 16px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+}
+
+.metric-icon{
+    width:62px;
+    height:62px;
+    margin-bottom:14px;
+    flex-shrink:0;
+}
+
+.metric-icon svg{
+    width:100%;
+    height:100%;
+    display:block;
+}
+
+.metric-value{
+    font-size:42px;
+    font-weight:700;
+    line-height:1;
+    color:#1e293b;
+    margin-bottom:10px;
+    letter-spacing:-0.03em;
+}
+
+.metric-label{
+    font-size:17px;
+    line-height:1.35;
+    font-weight:500;
+    color:#1f2937;
+}
+
+@media (max-width:1200px){
+    .metric-card{
+        padding:16px 12px;
+    }
+
+    .metric-value{
+        font-size:34px;
+    }
+
+    .metric-label{
+        font-size:15px;
+    }
+
+    .metric-icon{
+        width:54px;
+        height:54px;
+    }
+}
+
+@media (max-width:900px){
+    .metrics-row{
+        gap:12px;
+    }
+
+    .metric-value{
+        font-size:28px;
+    }
+
+    .metric-label{
+        font-size:13px;
+    }
+
+    .metric-icon{
+        width:46px;
+        height:46px;
+    }
+}
+</style>
+</head>
+<body>
+
+<section class="metrics-section">
+    <div class="metrics-row">
+
+        <!-- Card 1 -->
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 64 64">
+                    <rect x="8" y="10" width="40" height="44" rx="6" fill="#2F80ED"/>
+                    <circle cx="18" cy="22" r="6" fill="#fff"/>
+                    <circle cx="18" cy="38" r="6" fill="#fff"/>
+                    <path d="M15 22l2 2 4-5" stroke="#2F80ED" stroke-width="2.5" fill="none"/>
+                    <path d="M15 38l2 2 4-5" stroke="#2F80ED" stroke-width="2.5" fill="none"/>
+                    <path d="M30 18h14M30 34h14" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M40 14l6 4-6 4M40 30l6 4-6 4" fill="#fff"/>
+                    <path d="M48 38h10" stroke="#2F80ED" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M54 32l8 6-8 6" fill="#2F80ED"/>
+                </svg>
+            </div>
+            <div class="metric-value">600+</div>
+            <div class="metric-label">Automated identity workflows</div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 64 64">
+                    <rect x="8" y="12" width="36" height="26" rx="3" fill="#2F80ED"/>
+                    <rect x="12" y="16" width="28" height="18" fill="#DCEBFA"/>
+                    <rect x="5" y="40" width="42" height="5" rx="2" fill="#2F80ED"/>
+                    <rect x="36" y="22" width="14" height="28" rx="3" fill="#2F80ED"/>
+                    <rect x="39" y="26" width="8" height="18" fill="#DCEBFA"/>
+                </svg>
+            </div>
+            <div class="metric-value">500+</div>
+            <div class="metric-label">Managed enterprise devices</div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 64 64">
+                    <circle cx="32" cy="32" r="10" fill="#38A169"/>
+                    <circle cx="14" cy="14" r="8" fill="#56CCF2"/>
+                    <circle cx="50" cy="14" r="8" fill="#48BB78"/>
+                    <circle cx="48" cy="48" r="8" fill="#3182CE"/>
+                    <line x1="22" y1="20" x2="27" y2="26" stroke="#38A169" stroke-width="4"/>
+                    <line x1="42" y1="20" x2="37" y2="26" stroke="#38A169" stroke-width="4"/>
+                    <line x1="40" y1="38" x2="44" y2="43" stroke="#38A169" stroke-width="4"/>
+                    <circle cx="32" cy="32" r="20" fill="none" stroke="#B2E3E7" stroke-width="4"/>
+                </svg>
+            </div>
+            <div class="metric-value">10+</div>
+            <div class="metric-label">SaaS integrations delivered</div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 64 64">
+                    <circle cx="32" cy="32" r="26" fill="#2FA866"/>
+                    <circle cx="32" cy="32" r="18" fill="none" stroke="#fff" stroke-width="4"/>
+                    <path d="M22 32l7 7 14-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="metric-value">99.9%</div>
+            <div class="metric-label">Platform uptime</div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="metric-card">
+            <div class="metric-icon">
+                <svg viewBox="0 0 64 64">
+                    <circle cx="32" cy="32" r="26" fill="#F2B84B"/>
+                    <text x="32" y="30" text-anchor="middle" font-size="28" font-weight="700" fill="#fff">$</text>
+                    <path d="M44 36v12" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M38 44l6 7 6-7" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="metric-value" style="color:#1F8A4C;">25%</div>
+            <div class="metric-label">Licensing cost reduction</div>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
