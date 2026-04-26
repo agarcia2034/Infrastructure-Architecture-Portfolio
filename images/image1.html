@@ -1,266 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cloud Platform Architect Capability Cards</title>
-  <style>
-    * { box-sizing: border-box; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Platform Capability Cards</title>
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 1584px;
-      height: 396px;
-      background: #f7f8f6;
-      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #1f2a2e;
-      overflow: hidden;
-    }
+<style>
+* { box-sizing: border-box; }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(circle at 11% 20%, rgba(79,127,107,.08), transparent 18%),
-        radial-gradient(circle at 87% 18%, rgba(127,175,154,.08), transparent 20%),
-        linear-gradient(180deg, #fbfbfa 0%, #f7f8f6 100%);
-      pointer-events: none;
-    }
+body {
+  margin: 0;
+  background: #f7f8f6;
+  font-family: Inter, "Segoe UI", sans-serif;
+  color: #1f2a2e;
+}
 
-    .cards-section {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      padding: 34px 44px;
-    }
+.cards-section {
+  padding: 28px;
+}
 
-    .cards-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-      height: 100%;
-      align-items: stretch;
-    }
+.cards-row {
+  display: flex;
+  gap: 18px;
+}
 
-    .card {
-      position: relative;
-      min-width: 0;
-      height: 328px;
-      background: rgba(255,255,255,.76);
-      border: 1px solid rgba(127, 175, 154, .30);
-      border-radius: 24px;
-      box-shadow: 0 16px 34px rgba(31,42,46,.07);
-      padding: 24px 26px 22px;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
+.card {
+  flex: 1;
+  height: 320px; /* LOCKED */
+  background: #ffffff;
+  border: 1px solid #dde5df;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
 
-    .card::after {
-      content: "";
-      position: absolute;
-      right: -34px;
-      top: -34px;
-      width: 126px;
-      height: 126px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(221,233,226,.65) 0%, rgba(221,233,226,.18) 46%, transparent 70%);
-      filter: blur(.2px);
-    }
+.card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1f2a2e;
+  margin-bottom: 14px;
+}
 
-    .card-header {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      min-height: 86px;
-    }
+.divider {
+  border: none;
+  border-top: 1px solid #e6ece8;
+  margin-bottom: 14px;
+}
 
-    .icon-wrap {
-      flex: 0 0 72px;
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: radial-gradient(circle at 38% 34%, var(--wash), rgba(255,255,255,.86) 61%, rgba(255,255,255,.45) 100%);
-      box-shadow: inset 0 0 0 1px rgba(31,42,46,.06), 0 8px 18px rgba(31,42,46,.06);
-    }
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
 
-    .card:nth-child(1) { --accent: #4f7f6b; --wash: #dde9e2; }
-    .card:nth-child(2) { --accent: #6f95ad; --wash: #d8e6ed; }
-    .card:nth-child(3) { --accent: #4f7f6b; --wash: #dbe8df; }
-    .card:nth-child(4) { --accent: #8f7eb8; --wash: #e1dceb; }
+.card-list li {
+  font-size: 14.5px; /* adjusted to fit */
+  font-weight: 500;
+  padding-left: 18px;
+  position: relative;
+  color: #4a5a5f;
+}
 
-    .icon-wrap svg {
-      width: 42px;
-      height: 42px;
-      display: block;
-      fill: none;
-      stroke: #1f2a2e;
-      stroke-width: 2.05;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .card-title {
-      margin: 0;
-      max-width: 210px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 25px;
-      line-height: 1.08;
-      font-weight: 600;
-      letter-spacing: -0.035em;
-      color: #1f2a2e;
-    }
-
-    .accent-stroke {
-      position: relative;
-      width: 45px;
-      height: 2px;
-      margin: 10px 0 18px 90px;
-      background: var(--accent);
-      border-radius: 99px;
-      opacity: .9;
-    }
-
-    .accent-stroke::after {
-      content: "";
-      position: absolute;
-      left: 8px;
-      top: 4px;
-      width: 30px;
-      height: 1px;
-      background: var(--accent);
-      border-radius: 99px;
-      opacity: .55;
-    }
-
-    .card-list {
-      position: relative;
-      z-index: 1;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 15px;
-    }
-
-    .card-list li {
-      position: relative;
-      padding-left: 22px;
-      font-size: 17.5px;
-      line-height: 1.28;
-      font-weight: 500;
-      color: #405057;
-      letter-spacing: -.012em;
-    }
-
-    .card-list li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 8px;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(127,175,154,.14);
-    }
-  </style>
+.card-list li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #7faf9a;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+</style>
 </head>
+
 <body>
-  <section class="cards-section">
-    <div class="cards-row">
+<section class="cards-section">
+<div class="cards-row">
 
-      <article class="card">
-        <div class="card-header">
-          <div class="icon-wrap" aria-hidden="true">
-            <svg viewBox="0 0 48 48" role="img">
-              <path d="M24 5.5c-5.2 3.4-10.2 4.6-15 5.2v11.5c0 9.8 6.2 16.5 15 20.2 8.8-3.7 15-10.4 15-20.2V10.7c-4.8-.6-9.8-1.8-15-5.2Z" />
-              <path d="M17.5 24.2l4.3 4.3 9-10" />
-            </svg>
-          </div>
-          <h3 class="card-title">Identity-First Security</h3>
-        </div>
-        <div class="accent-stroke"></div>
-        <ul class="card-list">
-          <li>Zero trust enforcement</li>
-          <li>Conditional access policies</li>
-          <li>Risk-based authentication</li>
-        </ul>
-      </article>
+<!-- Card 1 -->
+<div class="card">
+  <div class="card-title">Identity-First Security</div>
+  <div class="divider"></div>
+  <ul class="card-list">
+    <li>Zero trust enforcement</li>
+    <li>Conditional access policies</li>
+    <li>Risk-based authentication</li>
+  </ul>
+</div>
 
-      <article class="card">
-        <div class="card-header">
-          <div class="icon-wrap" aria-hidden="true">
-            <svg viewBox="0 0 48 48" role="img">
-              <path d="M16.3 34.5h19.4c5.4 0 9.8-4 9.8-9.2 0-4.9-3.8-8.8-8.9-9.1C34.8 9.6 29.2 5.5 22.4 5.5c-6.3 0-11.6 3.9-13.3 9.4C5 16.2 2.5 19.8 2.5 24.1c0 5.7 4.6 10.4 10.3 10.4h3.5" />
-              <path d="M17 26.5h14" />
-              <path d="M17 20.5h19" />
-            </svg>
-          </div>
-          <h3 class="card-title">Cloud Platform Architecture</h3>
-        </div>
-        <div class="accent-stroke"></div>
-        <ul class="card-list">
-          <li>Azure-native design</li>
-          <li>SaaS system integration</li>
-          <li>Scalable workload patterns</li>
-        </ul>
-      </article>
+<!-- Card 2 -->
+<div class="card">
+  <div class="card-title">Cloud Platform Architecture</div>
+  <div class="divider"></div>
+  <ul class="card-list">
+    <li>Azure-native design</li>
+    <li>SaaS system integration</li>
+    <li>Scalable workload patterns</li>
+  </ul>
+</div>
 
-      <article class="card">
-        <div class="card-header">
-          <div class="icon-wrap" aria-hidden="true">
-            <svg viewBox="0 0 48 48" role="img">
-              <circle cx="11" cy="13" r="4" />
-              <circle cx="37" cy="13" r="4" />
-              <circle cx="24" cy="35" r="4" />
-              <path d="M15 14.5c7.2 1.8 13.5 1.8 20 0" />
-              <path d="M13.4 16.8 21.5 31" />
-              <path d="M34.6 16.8 26.5 31" />
-              <path d="M24 9v8" />
-            </svg>
-          </div>
-          <h3 class="card-title">Automation &amp; Integration</h3>
-        </div>
-        <div class="accent-stroke"></div>
-        <ul class="card-list">
-          <li>Event-driven workflows</li>
-          <li>Identity lifecycle automation</li>
-          <li>API-first integrations</li>
-        </ul>
-      </article>
+<!-- Card 3 -->
+<div class="card">
+  <div class="card-title">Automation & Integration</div>
+  <div class="divider"></div>
+  <ul class="card-list">
+    <li>Event-driven workflows</li>
+    <li>Identity lifecycle automation</li>
+    <li>API-first integrations</li>
+  </ul>
+</div>
 
-      <article class="card">
-        <div class="card-header">
-          <div class="icon-wrap" aria-hidden="true">
-            <svg viewBox="0 0 48 48" role="img">
-              <path d="M8 38V14" />
-              <path d="M8 38h32" />
-              <path d="M14 32v-8" />
-              <path d="M23 32V18" />
-              <path d="M32 32V12" />
-              <path d="M14 13h26v8" />
-              <path d="M40 13 28 25l-6-6-8 8" />
-            </svg>
-          </div>
-          <h3 class="card-title">Platform Reliability &amp; Governance</h3>
-        </div>
-        <div class="accent-stroke"></div>
-        <ul class="card-list">
-          <li>Centralized observability</li>
-          <li>Policy-driven infrastructure</li>
-          <li>Cost and performance optimization</li>
-        </ul>
-      </article>
+<!-- Card 4 -->
+<div class="card">
+  <div class="card-title">Platform Reliability & Governance</div>
+  <div class="divider"></div>
+  <ul class="card-list">
+    <li>Centralized observability</li>
+    <li>Policy-driven infrastructure</li>
+    <li>Cost and performance optimization</li>
+  </ul>
+</div>
 
-    </div>
-  </section>
+</div>
+</section>
 </body>
 </html>
