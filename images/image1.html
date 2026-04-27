@@ -6,149 +6,188 @@
 <title>Platform Capability Cards</title>
 
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  background: transparent; /* FULL TRANSPARENCY */
-  font-family: Inter, "Segoe UI", sans-serif;
+  background: transparent !important;
+  background-color: transparent !important;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #1f2a2e;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
 }
 
 .cards-section {
   width: 100%;
   padding: 28px;
-  background: transparent; /* FULL TRANSPARENCY */
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 .cards-row {
-  display: flex;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
   width: 100%;
+  background: transparent !important;
 }
 
 .card {
-  flex: 1;
-  height: 320px; /* LOCKED */
+  height: 320px; /* locked */
   background: #ffffff;
   border: 1px solid #dde5df;
   border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  padding: 22px;
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 8px 20px rgba(31, 42, 46, 0.06);
+  padding: 22px 22px 20px;
+  display: grid;
+  grid-template-rows: 62px 1px 1fr;
+  row-gap: 16px;
   overflow: hidden;
 }
 
 .card-title {
-  font-family: "Playfair Display", serif;
-  font-size: 20px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  line-height: 1.22;
   font-weight: 600;
-  line-height: 1.3;
+  letter-spacing: -0.02em;
   color: #1f2a2e;
-  margin-bottom: 14px;
-  letter-spacing: -0.01em;
+  display: flex;
+  align-items: flex-start;
 }
 
 .divider {
-  border: none;
-  border-top: 1px solid #e6ece8;
-  margin-bottom: 14px;
+  width: 100%;
+  height: 1px;
+  background: #e6ece8;
 }
 
 .card-list {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: grid;
-  gap: 10px;
+  grid-template-rows: repeat(3, 34px);
+  row-gap: 10px;
+  align-content: start;
 }
 
 .card-list li {
-  font-size: 14.5px;
-  font-weight: 500;
-  padding-left: 18px;
   position: relative;
+  padding-left: 20px;
+  font-size: 14.25px;
+  line-height: 1.25;
+  font-weight: 500;
   color: #4a5a5f;
+  display: flex;
+  align-items: center;
 }
 
 .card-list li::before {
   content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background: #7faf9a;
-  position: absolute;
-  left: 0;
-  top: 6px;
+  transform: translateY(-50%);
 }
 
-/* Responsive scaling (keeps proportions clean) */
+/* Keeps layout clean on narrower widths */
 @media (max-width: 1200px) {
-  .card-title { font-size: 18px; }
-  .card-list li { font-size: 13.5px; }
+  .card {
+    padding: 20px 18px 18px;
+  }
+
+  .card-title {
+    font-size: 17px;
+  }
+
+  .card-list li {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 900px) {
-  .cards-row { gap: 12px; }
-  .card { padding: 18px; }
-  .card-title { font-size: 16px; }
-  .card-list li { font-size: 12.5px; }
+  .cards-section {
+    padding: 18px;
+  }
+
+  .cards-row {
+    gap: 12px;
+  }
+
+  .card {
+    padding: 18px 14px;
+  }
+
+  .card-title {
+    font-size: 15px;
+  }
+
+  .card-list li {
+    font-size: 12px;
+  }
 }
 </style>
 </head>
 
 <body>
 <section class="cards-section">
-<div class="cards-row">
+  <div class="cards-row">
 
-<!-- Card 1 -->
-<div class="card">
-  <div class="card-title">Identity-First Security</div>
-  <hr class="divider" />
-  <ul class="card-list">
-    <li>Zero trust enforcement</li>
-    <li>Conditional access policies</li>
-    <li>Risk-based authentication</li>
-  </ul>
-</div>
+    <article class="card">
+      <h3 class="card-title">Identity-First Security</h3>
+      <div class="divider"></div>
+      <ul class="card-list">
+        <li>Zero trust enforcement</li>
+        <li>Conditional access policies</li>
+        <li>Risk-based authentication</li>
+      </ul>
+    </article>
 
-<!-- Card 2 -->
-<div class="card">
-  <div class="card-title">Cloud Platform Architecture</div>
-  <hr class="divider" />
-  <ul class="card-list">
-    <li>Azure-native design</li>
-    <li>SaaS system integration</li>
-    <li>Scalable workload patterns</li>
-  </ul>
-</div>
+    <article class="card">
+      <h3 class="card-title">Cloud Platform Architecture</h3>
+      <div class="divider"></div>
+      <ul class="card-list">
+        <li>Azure-native design</li>
+        <li>SaaS system integration</li>
+        <li>Scalable workload patterns</li>
+      </ul>
+    </article>
 
-<!-- Card 3 -->
-<div class="card">
-  <div class="card-title">Automation & Integration</div>
-  <hr class="divider" />
-  <ul class="card-list">
-    <li>Event-driven workflows</li>
-    <li>Identity lifecycle automation</li>
-    <li>API-first integrations</li>
-  </ul>
-</div>
+    <article class="card">
+      <h3 class="card-title">Automation &amp; Integration</h3>
+      <div class="divider"></div>
+      <ul class="card-list">
+        <li>Event-driven workflows</li>
+        <li>Identity lifecycle automation</li>
+        <li>API-first integrations</li>
+      </ul>
+    </article>
 
-<!-- Card 4 -->
-<div class="card">
-  <div class="card-title">Platform Reliability & Governance</div>
-  <hr class="divider" />
-  <ul class="card-list">
-    <li>Centralized observability</li>
-    <li>Policy-driven infrastructure</li>
-    <li>Cost and performance optimization</li>
-  </ul>
-</div>
+    <article class="card">
+      <h3 class="card-title">Platform Reliability &amp; Governance</h3>
+      <div class="divider"></div>
+      <ul class="card-list">
+        <li>Centralized observability</li>
+        <li>Policy-driven infrastructure</li>
+        <li>Cost and performance optimization</li>
+      </ul>
+    </article>
 
-</div>
+  </div>
 </section>
 </body>
 </html>
