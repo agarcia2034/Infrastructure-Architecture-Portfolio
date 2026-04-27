@@ -1,125 +1,691 @@
-<section class="platform-marquee">
+<section class="platform-marquee" aria-label="Technology platform marquee">
   <div class="platform-track">
 
-    <div class="platform-pill azure">
-      <span class="icon">☁️</span>
+    <div class="platform-pill identity">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 10V8a5 5 0 0 1 10 0v2"/><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M12 14v3"/><circle cx="12" cy="14" r="1"/></svg>
+      </span>
       <span>Microsoft Entra ID</span>
     </div>
 
-    <div class="platform-pill azure">
-      <span class="icon">🔷</span>
+    <div class="platform-pill cloud">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.3-1.9A5 5 0 0 0 7 18Z"/></svg>
+      </span>
       <span>Microsoft Azure</span>
     </div>
 
-    <div class="platform-pill intune">
-      <span class="icon">💻</span>
-      <span>Intune / Autopilot</span>
+    <div class="platform-pill endpoint">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="13" height="9" rx="1.5"/><path d="M7 18h8M9 14v4"/><rect x="16" y="9" width="5" height="9" rx="1.4"/></svg>
+      </span>
+      <span>Microsoft Intune</span>
+    </div>
+
+    <div class="platform-pill endpoint">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M8 10h8M8 14h5"/><path d="M18 4l2 2-2 2"/></svg>
+      </span>
+      <span>Windows Autopilot</span>
     </div>
 
     <div class="platform-pill devops">
-      <span class="icon">🔄</span>
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 7h6a4 4 0 0 1 0 8H9"/><path d="M9 11H5v8h8v-4"/><path d="M15 7l3-3 3 3"/><path d="M18 4v10"/></svg>
+      </span>
       <span>Azure DevOps</span>
     </div>
 
+    <div class="platform-pill devops">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 7h5v5H5zM14 7h5v5h-5zM9.5 14h5v5h-5z"/><path d="M10 9.5h4M16.5 12v2M12 14v-2"/></svg>
+      </span>
+      <span>Azure DevOps Pipelines</span>
+    </div>
+
+    <div class="platform-pill devops">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 6v12M17 6v12"/><circle cx="7" cy="6" r="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="6" r="2"/><circle cx="17" cy="18" r="2"/><path d="M9 6h6M9 18h6"/></svg>
+      </span>
+      <span>Azure DevOps Repos</span>
+    </div>
+
+    <div class="platform-pill devops">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h5M8 17h7"/></svg>
+      </span>
+      <span>Azure DevOps Boards</span>
+    </div>
+
+    <div class="platform-pill devops">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 4l8 4v8l-8 4-8-4V8l8-4Z"/><path d="M4 8l8 4 8-4M12 12v8"/></svg>
+      </span>
+      <span>Azure DevOps Artifacts</span>
+    </div>
+
+    <div class="platform-pill github">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 19c-4 1.2-4-2-6-2"/><path d="M15 22v-3.5c0-1 .3-1.8.8-2.3 2.7-.3 5.2-1.3 5.2-5.7 0-1.3-.5-2.4-1.2-3.3.1-.3.5-1.6-.1-3.2 0 0-1-.3-3.4 1.2a11.5 11.5 0 0 0-6.2 0C7.7 3.7 6.7 4 6.7 4c-.6 1.6-.2 2.9-.1 3.2A4.7 4.7 0 0 0 5.4 10.5c0 4.4 2.5 5.4 5.2 5.7.4.4.7 1 .8 1.7V22"/></svg>
+      </span>
+      <span>GitHub</span>
+    </div>
+
+    <div class="platform-pill github">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M13 3L4 14h7l-1 7 9-12h-7l1-6Z"/></svg>
+      </span>
+      <span>GitHub Actions</span>
+    </div>
+
+    <div class="platform-pill github">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9l3 3-3 3M13 15h3"/></svg>
+      </span>
+      <span>GitHub Codespaces</span>
+    </div>
+
+    <div class="platform-pill github">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3Z"/><path d="M9 12l2 2 4-5"/></svg>
+      </span>
+      <span>GitHub Advanced Security</span>
+    </div>
+
     <div class="platform-pill terraform">
-      <span class="icon">⬢</span>
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 4l6 3.5v7L5 11V4Z"/><path d="M13 8l6-3.5v7L13 15V8Z"/><path d="M13 16l6-3.5v7L13 23v-7Z"/></svg>
+      </span>
       <span>Terraform</span>
     </div>
 
+    <div class="platform-pill terraform">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 4l7 4v8l-7 4-7-4V8l7-4Z"/><path d="M8 10h8M8 14h8"/></svg>
+      </span>
+      <span>Bicep</span>
+    </div>
+
+    <div class="platform-pill terraform">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 6h14v12H5z"/><path d="M8 9h8M8 12h5M8 15h7"/></svg>
+      </span>
+      <span>ARM Templates</span>
+    </div>
+
     <div class="platform-pill powershell">
-      <span class="icon">❯</span>
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9l4 3-4 3"/><path d="M13 16h4"/></svg>
+      </span>
       <span>PowerShell</span>
     </div>
 
-    <div class="platform-pill datafactory">
-      <span class="icon">🏭</span>
+    <div class="platform-pill powershell">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h4M7 14h8M16 10h1"/></svg>
+      </span>
+      <span>Azure CLI</span>
+    </div>
+
+    <div class="platform-pill data">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 19V8l5-3 5 3 6-3v14"/><path d="M4 19h16"/><path d="M9 5v14M14 8v11"/><path d="M6 11h2M11 13h2M16 10h2"/></svg>
+      </span>
       <span>Azure Data Factory</span>
     </div>
 
-    <div class="platform-pill aws">
-      <span class="icon">🟧</span>
+    <div class="platform-pill event">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/><circle cx="12" cy="3" r="1.5"/><circle cx="12" cy="21" r="1.5"/><circle cx="3" cy="12" r="1.5"/><circle cx="21" cy="12" r="1.5"/></svg>
+      </span>
+      <span>Azure Event Grid</span>
+    </div>
+
+    <div class="platform-pill event">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M13 3L6 14h6l-1 7 7-12h-6l1-6Z"/></svg>
+      </span>
+      <span>Azure Functions</span>
+    </div>
+
+    <div class="platform-pill event">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 7h4v4H7zM13 13h4v4h-4z"/><path d="M11 9h4v4M9 11v4h4"/></svg>
+      </span>
+      <span>Azure Logic Apps</span>
+    </div>
+
+    <div class="platform-pill event">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 8h16v8H4z"/><path d="M8 8v8M16 8v8M6 12h12"/></svg>
+      </span>
+      <span>Azure Service Bus</span>
+    </div>
+
+    <div class="platform-pill api">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M9 8l-4 4 4 4M15 8l4 4-4 4"/><path d="M11 19l2-14"/></svg>
+      </span>
+      <span>Azure API Management</span>
+    </div>
+
+    <div class="platform-pill app">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M8 9h8M8 13h6M8 17h4"/></svg>
+      </span>
+      <span>Azure App Service</span>
+    </div>
+
+    <div class="platform-pill app">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l8 4v10l-8 4-8-4V7l8-4Z"/><circle cx="12" cy="12" r="3"/><path d="M12 5v4M12 15v4M5.8 8.5l3.5 2M14.7 13.5l3.5 2"/></svg>
+      </span>
+      <span>Azure Kubernetes Service</span>
+    </div>
+
+    <div class="platform-pill app">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 7l7-4 7 4v10l-7 4-7-4V7Z"/><path d="M8 9l4 2 4-2M8 13l4 2 4-2"/></svg>
+      </span>
+      <span>Azure Container Registry</span>
+    </div>
+
+    <div class="platform-pill security">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 20V8l3-3 4 3 4-3 3 3v12"/><path d="M5 12h14M9 8v4M15 8v4M12 12v8"/></svg>
+      </span>
+      <span>Azure Firewall</span>
+    </div>
+
+    <div class="platform-pill storage">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+      </span>
       <span>AWS S3</span>
     </div>
 
-    <div class="platform-pill powerbi">
-      <span class="icon">📊</span>
+    <div class="platform-pill storage">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg>
+      </span>
+      <span>Azure Storage Accounts</span>
+    </div>
+
+    <div class="platform-pill storage">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M9 12h6M9 16h6"/></svg>
+      </span>
+      <span>Azure SQL Database</span>
+    </div>
+
+    <div class="platform-pill analytics">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 19h16"/><rect x="6" y="11" width="3" height="8" rx="1"/><rect x="11" y="7" width="3" height="12" rx="1"/><rect x="16" y="4" width="3" height="15" rx="1"/></svg>
+      </span>
       <span>Power BI</span>
     </div>
 
-    <div class="platform-pill defender">
-      <span class="icon">🛡️</span>
+    <div class="platform-pill security">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3Z"/><path d="M8.5 12l2.5 2.5 5-6"/></svg>
+      </span>
       <span>Microsoft Defender Suite</span>
     </div>
 
-    <div class="platform-pill google">
-      <span class="icon">G</span>
+    <div class="platform-pill security">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3Z"/><rect x="8" y="9" width="8" height="6" rx="1"/></svg>
+      </span>
+      <span>Defender for Endpoint</span>
+    </div>
+
+    <div class="platform-pill security">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3Z"/><circle cx="12" cy="10" r="2.5"/><path d="M8 16c1-2.2 2.4-3 4-3s3 .8 4 3"/></svg>
+      </span>
+      <span>Defender for Identity</span>
+    </div>
+
+    <div class="platform-pill security">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.3-1.9A5 5 0 0 0 7 18Z"/><path d="M12 9l4 2v3c0 2.2-1.3 3.6-4 4.5-2.7-.9-4-2.3-4-4.5v-3l4-2Z"/></svg>
+      </span>
+      <span>Defender for Cloud Apps</span>
+    </div>
+
+    <div class="platform-pill security">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l8 5v6c0 4-3 6.5-8 8-5-1.5-8-4-8-8V8l8-5Z"/><path d="M12 8v5l4 2"/></svg>
+      </span>
+      <span>Microsoft Sentinel</span>
+    </div>
+
+    <div class="platform-pill monitor">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 16l4-4 4 3 5-7 3 4"/><path d="M4 20h16"/></svg>
+      </span>
+      <span>Azure Monitor</span>
+    </div>
+
+    <div class="platform-pill monitor">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 5h14v14H5z"/><path d="M8 9h8M8 13h5M8 17h7"/></svg>
+      </span>
+      <span>Log Analytics</span>
+    </div>
+
+    <div class="platform-pill monitor">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3a7 7 0 0 0-4 12v3h8v-3a7 7 0 0 0-4-12Z"/><path d="M9 21h6"/></svg>
+      </span>
+      <span>Application Insights</span>
+    </div>
+
+    <div class="platform-pill backup">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 5a7 7 0 1 1-6.2 10.2"/><path d="M6 15H3v-3"/><path d="M12 8v5l3 2"/></svg>
+      </span>
+      <span>Azure Backup</span>
+    </div>
+
+    <div class="platform-pill backup">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 7h14v10H5z"/><path d="M8 20h8"/><path d="M12 17v3"/><path d="M8 12h8"/></svg>
+      </span>
+      <span>Azure Site Recovery</span>
+    </div>
+
+    <div class="platform-pill workspace">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 8h6v8H8z"/><path d="M14 10h3c1 0 2 .9 2 2v2c0 1.1-.9 2-2 2h-3"/><circle cx="11" cy="5" r="2"/></svg>
+      </span>
+      <span>Microsoft Teams</span>
+    </div>
+
+    <div class="platform-pill workspace">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="9" cy="12" r="4"/><circle cx="15" cy="8" r="3"/><circle cx="16" cy="16" r="3"/><path d="M12 10l2-1M12 14l2 1"/></svg>
+      </span>
+      <span>SharePoint Online</span>
+    </div>
+
+    <div class="platform-pill workspace">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.3-1.9A5 5 0 0 0 7 18Z"/></svg>
+      </span>
+      <span>OneDrive</span>
+    </div>
+
+    <div class="platform-pill workspace">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 5h14v14H5z"/><path d="M8 9h8M8 13h5"/><path d="M15 15l3 3"/></svg>
+      </span>
+      <span>Microsoft Purview</span>
+    </div>
+
+    <div class="platform-pill workspace">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M17.5 10.5H12v3h2.8c-.5 1.7-1.9 2.8-4 2.8A4.8 4.8 0 1 1 14.2 8"/><path d="M18 7.2A8 8 0 1 0 20 12"/></svg>
+      </span>
       <span>Google Workspace</span>
     </div>
 
-    <div class="platform-pill salesforce">
-      <span class="icon">☁</span>
+    <div class="platform-pill saas">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.3-1.9A5 5 0 0 0 7 18Z"/><path d="M9 14h6"/></svg>
+      </span>
       <span>Salesforce</span>
+    </div>
+
+    <div class="platform-pill endpoint">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M6 16c2-1 3-3 3-6 0-2 1.5-4 4-4s4 2 4 4c0 3 1 5 3 6"/><path d="M9 16c1.5 2 4.5 4 7 0"/><circle cx="10" cy="11" r="1"/><circle cx="16" cy="11" r="1"/></svg>
+      </span>
+      <span>Jamf</span>
     </div>
 
     <!-- Duplicate Set for Infinite Loop -->
-    <div class="platform-pill azure">
-      <span class="icon">☁️</span>
+    <div class="platform-pill identity">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 10V8a5 5 0 0 1 10 0v2"/><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M12 14v3"/><circle cx="12" cy="14" r="1"/></svg>
+      </span>
       <span>Microsoft Entra ID</span>
     </div>
 
-    <div class="platform-pill azure">
-      <span class="icon">🔷</span>
+    <div class="platform-pill cloud">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.3-1.9A5 5 0 0 0 7 18Z"/></svg>
+      </span>
       <span>Microsoft Azure</span>
     </div>
 
-    <div class="platform-pill intune">
-      <span class="icon">💻</span>
-      <span>Intune / Autopilot</span>
+    <div class="platform-pill endpoint">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="13" height="9" rx="1.5"/><path d="M7 18h8M9 14v4"/><rect x="16" y="9" width="5" height="9" rx="1.4"/></svg>
+      </span>
+      <span>Microsoft Intune</span>
+    </div>
+
+    <div class="platform-pill endpoint">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M8 10h8M8 14h5"/><path d="M18 4l2 2-2 2"/></svg>
+      </span>
+      <span>Windows Autopilot</span>
     </div>
 
     <div class="platform-pill devops">
-      <span class="icon">🔄</span>
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 7h6a4 4 0 0 1 0 8H9"/><path d="M9 11H5v8h8v-4"/><path d="M15 7l3-3 3 3"/><path d="M18 4v10"/></svg>
+      </span>
       <span>Azure DevOps</span>
     </div>
 
+    <div class="platform-pill devops">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 7h5v5H5zM14 7h5v5h-5zM9.5 14h5v5h-5z"/><path d="M10 9.5h4M16.5 12v2M12 14v-2"/></svg>
+      </span>
+      <span>Azure DevOps Pipelines</span>
+    </div>
+
+    <div class="platform-pill devops">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 6v12M17 6v12"/><circle cx="7" cy="6" r="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="6" r="2"/><circle cx="17" cy="18" r="2"/><path d="M9 6h6M9 18h6"/></svg>
+      </span>
+      <span>Azure DevOps Repos</span>
+    </div>
+
+    <div class="platform-pill devops">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h5M8 17h7"/></svg>
+      </span>
+      <span>Azure DevOps Boards</span>
+    </div>
+
+    <div class="platform-pill devops">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 4l8 4v8l-8 4-8-4V8l8-4Z"/><path d="M4 8l8 4 8-4M12 12v8"/></svg>
+      </span>
+      <span>Azure DevOps Artifacts</span>
+    </div>
+
+    <div class="platform-pill github">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 19c-4 1.2-4-2-6-2"/><path d="M15 22v-3.5c0-1 .3-1.8.8-2.3 2.7-.3 5.2-1.3 5.2-5.7 0-1.3-.5-2.4-1.2-3.3.1-.3.5-1.6-.1-3.2 0 0-1-.3-3.4 1.2a11.5 11.5 0 0 0-6.2 0C7.7 3.7 6.7 4 6.7 4c-.6 1.6-.2 2.9-.1 3.2A4.7 4.7 0 0 0 5.4 10.5c0 4.4 2.5 5.4 5.2 5.7.4.4.7 1 .8 1.7V22"/></svg>
+      </span>
+      <span>GitHub</span>
+    </div>
+
+    <div class="platform-pill github">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M13 3L4 14h7l-1 7 9-12h-7l1-6Z"/></svg>
+      </span>
+      <span>GitHub Actions</span>
+    </div>
+
+    <div class="platform-pill github">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9l3 3-3 3M13 15h3"/></svg>
+      </span>
+      <span>GitHub Codespaces</span>
+    </div>
+
+    <div class="platform-pill github">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3Z"/><path d="M9 12l2 2 4-5"/></svg>
+      </span>
+      <span>GitHub Advanced Security</span>
+    </div>
+
     <div class="platform-pill terraform">
-      <span class="icon">⬢</span>
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 4l6 3.5v7L5 11V4Z"/><path d="M13 8l6-3.5v7L13 15V8Z"/><path d="M13 16l6-3.5v7L13 23v-7Z"/></svg>
+      </span>
       <span>Terraform</span>
     </div>
 
+    <div class="platform-pill terraform">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 4l7 4v8l-7 4-7-4V8l7-4Z"/><path d="M8 10h8M8 14h8"/></svg>
+      </span>
+      <span>Bicep</span>
+    </div>
+
+    <div class="platform-pill terraform">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 6h14v12H5z"/><path d="M8 9h8M8 12h5M8 15h7"/></svg>
+      </span>
+      <span>ARM Templates</span>
+    </div>
+
     <div class="platform-pill powershell">
-      <span class="icon">❯</span>
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9l4 3-4 3"/><path d="M13 16h4"/></svg>
+      </span>
       <span>PowerShell</span>
     </div>
 
-    <div class="platform-pill datafactory">
-      <span class="icon">🏭</span>
+    <div class="platform-pill powershell">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h4M7 14h8M16 10h1"/></svg>
+      </span>
+      <span>Azure CLI</span>
+    </div>
+
+    <div class="platform-pill data">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 19V8l5-3 5 3 6-3v14"/><path d="M4 19h16"/><path d="M9 5v14M14 8v11"/><path d="M6 11h2M11 13h2M16 10h2"/></svg>
+      </span>
       <span>Azure Data Factory</span>
     </div>
 
-    <div class="platform-pill aws">
-      <span class="icon">🟧</span>
+    <div class="platform-pill event">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/><circle cx="12" cy="3" r="1.5"/><circle cx="12" cy="21" r="1.5"/><circle cx="3" cy="12" r="1.5"/><circle cx="21" cy="12" r="1.5"/></svg>
+      </span>
+      <span>Azure Event Grid</span>
+    </div>
+
+    <div class="platform-pill event">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M13 3L6 14h6l-1 7 7-12h-6l1-6Z"/></svg>
+      </span>
+      <span>Azure Functions</span>
+    </div>
+
+    <div class="platform-pill event">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 7h4v4H7zM13 13h4v4h-4z"/><path d="M11 9h4v4M9 11v4h4"/></svg>
+      </span>
+      <span>Azure Logic Apps</span>
+    </div>
+
+    <div class="platform-pill event">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 8h16v8H4z"/><path d="M8 8v8M16 8v8M6 12h12"/></svg>
+      </span>
+      <span>Azure Service Bus</span>
+    </div>
+
+    <div class="platform-pill api">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M9 8l-4 4 4 4M15 8l4 4-4 4"/><path d="M11 19l2-14"/></svg>
+      </span>
+      <span>Azure API Management</span>
+    </div>
+
+    <div class="platform-pill app">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M8 9h8M8 13h6M8 17h4"/></svg>
+      </span>
+      <span>Azure App Service</span>
+    </div>
+
+    <div class="platform-pill app">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l8 4v10l-8 4-8-4V7l8-4Z"/><circle cx="12" cy="12" r="3"/><path d="M12 5v4M12 15v4M5.8 8.5l3.5 2M14.7 13.5l3.5 2"/></svg>
+      </span>
+      <span>Azure Kubernetes Service</span>
+    </div>
+
+    <div class="platform-pill app">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 7l7-4 7 4v10l-7 4-7-4V7Z"/><path d="M8 9l4 2 4-2M8 13l4 2 4-2"/></svg>
+      </span>
+      <span>Azure Container Registry</span>
+    </div>
+
+    <div class="platform-pill security">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 20V8l3-3 4 3 4-3 3 3v12"/><path d="M5 12h14M9 8v4M15 8v4M12 12v8"/></svg>
+      </span>
+      <span>Azure Firewall</span>
+    </div>
+
+    <div class="platform-pill storage">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+      </span>
       <span>AWS S3</span>
     </div>
 
-    <div class="platform-pill powerbi">
-      <span class="icon">📊</span>
+    <div class="platform-pill storage">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg>
+      </span>
+      <span>Azure Storage Accounts</span>
+    </div>
+
+    <div class="platform-pill storage">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M9 12h6M9 16h6"/></svg>
+      </span>
+      <span>Azure SQL Database</span>
+    </div>
+
+    <div class="platform-pill analytics">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 19h16"/><rect x="6" y="11" width="3" height="8" rx="1"/><rect x="11" y="7" width="3" height="12" rx="1"/><rect x="16" y="4" width="3" height="15" rx="1"/></svg>
+      </span>
       <span>Power BI</span>
     </div>
 
-    <div class="platform-pill defender">
-      <span class="icon">🛡️</span>
+    <div class="platform-pill security">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3Z"/><path d="M8.5 12l2.5 2.5 5-6"/></svg>
+      </span>
       <span>Microsoft Defender Suite</span>
     </div>
 
-    <div class="platform-pill google">
-      <span class="icon">G</span>
+    <div class="platform-pill security">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3Z"/><rect x="8" y="9" width="8" height="6" rx="1"/></svg>
+      </span>
+      <span>Defender for Endpoint</span>
+    </div>
+
+    <div class="platform-pill security">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3Z"/><circle cx="12" cy="10" r="2.5"/><path d="M8 16c1-2.2 2.4-3 4-3s3 .8 4 3"/></svg>
+      </span>
+      <span>Defender for Identity</span>
+    </div>
+
+    <div class="platform-pill security">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.3-1.9A5 5 0 0 0 7 18Z"/><path d="M12 9l4 2v3c0 2.2-1.3 3.6-4 4.5-2.7-.9-4-2.3-4-4.5v-3l4-2Z"/></svg>
+      </span>
+      <span>Defender for Cloud Apps</span>
+    </div>
+
+    <div class="platform-pill security">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l8 5v6c0 4-3 6.5-8 8-5-1.5-8-4-8-8V8l8-5Z"/><path d="M12 8v5l4 2"/></svg>
+      </span>
+      <span>Microsoft Sentinel</span>
+    </div>
+
+    <div class="platform-pill monitor">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 16l4-4 4 3 5-7 3 4"/><path d="M4 20h16"/></svg>
+      </span>
+      <span>Azure Monitor</span>
+    </div>
+
+    <div class="platform-pill monitor">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 5h14v14H5z"/><path d="M8 9h8M8 13h5M8 17h7"/></svg>
+      </span>
+      <span>Log Analytics</span>
+    </div>
+
+    <div class="platform-pill monitor">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3a7 7 0 0 0-4 12v3h8v-3a7 7 0 0 0-4-12Z"/><path d="M9 21h6"/></svg>
+      </span>
+      <span>Application Insights</span>
+    </div>
+
+    <div class="platform-pill backup">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 5a7 7 0 1 1-6.2 10.2"/><path d="M6 15H3v-3"/><path d="M12 8v5l3 2"/></svg>
+      </span>
+      <span>Azure Backup</span>
+    </div>
+
+    <div class="platform-pill backup">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 7h14v10H5z"/><path d="M8 20h8"/><path d="M12 17v3"/><path d="M8 12h8"/></svg>
+      </span>
+      <span>Azure Site Recovery</span>
+    </div>
+
+    <div class="platform-pill workspace">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 8h6v8H8z"/><path d="M14 10h3c1 0 2 .9 2 2v2c0 1.1-.9 2-2 2h-3"/><circle cx="11" cy="5" r="2"/></svg>
+      </span>
+      <span>Microsoft Teams</span>
+    </div>
+
+    <div class="platform-pill workspace">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="9" cy="12" r="4"/><circle cx="15" cy="8" r="3"/><circle cx="16" cy="16" r="3"/><path d="M12 10l2-1M12 14l2 1"/></svg>
+      </span>
+      <span>SharePoint Online</span>
+    </div>
+
+    <div class="platform-pill workspace">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.3-1.9A5 5 0 0 0 7 18Z"/></svg>
+      </span>
+      <span>OneDrive</span>
+    </div>
+
+    <div class="platform-pill workspace">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 5h14v14H5z"/><path d="M8 9h8M8 13h5"/><path d="M15 15l3 3"/></svg>
+      </span>
+      <span>Microsoft Purview</span>
+    </div>
+
+    <div class="platform-pill workspace">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M17.5 10.5H12v3h2.8c-.5 1.7-1.9 2.8-4 2.8A4.8 4.8 0 1 1 14.2 8"/><path d="M18 7.2A8 8 0 1 0 20 12"/></svg>
+      </span>
       <span>Google Workspace</span>
     </div>
 
-    <div class="platform-pill salesforce">
-      <span class="icon">☁</span>
+    <div class="platform-pill saas">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.3-1.9A5 5 0 0 0 7 18Z"/><path d="M9 14h6"/></svg>
+      </span>
       <span>Salesforce</span>
+    </div>
+
+    <div class="platform-pill endpoint">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M6 16c2-1 3-3 3-6 0-2 1.5-4 4-4s4 2 4 4c0 3 1 5 3 6"/><path d="M9 16c1.5 2 4.5 4 7 0"/><circle cx="10" cy="11" r="1"/><circle cx="16" cy="11" r="1"/></svg>
+      </span>
+      <span>Jamf</span>
     </div>
 
   </div>
@@ -127,52 +693,157 @@
 
 <style>
 .platform-marquee {
+  position: relative;
   width: 100%;
   overflow: hidden;
   padding: 12px 0;
   background: transparent;
+  isolation: isolate;
+}
+
+.platform-marquee::before,
+.platform-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 78px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.platform-marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(247,248,246,.85), transparent);
+}
+
+.platform-marquee::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(247,248,246,.85), transparent);
 }
 
 .platform-track {
   display: flex;
   gap: 14px;
   width: max-content;
-  animation: scrollLeft 38s linear infinite;
+  animation: scrollright 52.8s linear infinite;
+  will-change: transform;
+}
+
+.platform-marquee:hover .platform-track {
+  animation-play-state: paused;
 }
 
 .platform-pill {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 18px;
-  background: #ffffff;
-  border: 1px solid #d9e1ec;
-  border-radius: 14px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  font-family: Inter, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  color: #1f2937;
+  min-height: 42px;
+  padding: 9px 17px 9px 10px;
+  background:
+    radial-gradient(circle at 26% 20%, rgba(255,255,255,.92), transparent 34%),
+    linear-gradient(180deg, rgba(251,252,250,.98), rgba(247,248,246,.96));
+  border: 1px solid rgba(127,175,154,.38);
+  border-radius: 999px;
+  box-shadow:
+    0 9px 22px rgba(31,42,46,.075),
+    inset 0 1px 0 rgba(255,255,255,.82);
+  font-family: Inter, "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 650;
+  letter-spacing: .005em;
+  color: #1f2a2e;
   white-space: nowrap;
   flex-shrink: 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.platform-pill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(127,175,154,.15) 0 1px, transparent 1.5px);
+  background-size: 18px 18px;
+  opacity: .20;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.platform-pill::after {
+  content: "";
+  position: absolute;
+  left: 42px;
+  right: 18px;
+  bottom: 6px;
+  height: 3px;
+  background: #4f7f6b;
+  border-radius: 999px;
+  opacity: .26;
+  clip-path: polygon(0 50%, 15% 31%, 31% 53%, 49% 34%, 68% 52%, 84% 36%, 100% 48%, 100% 82%, 0 78%);
+  transform: scaleX(.58);
+  transform-origin: left;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+.platform-pill:hover::after {
+  transform: scaleX(1);
+  opacity: .48;
+}
+
+.platform-pill:hover {
+  border-color: rgba(79,127,107,.58);
+  box-shadow:
+    0 12px 28px rgba(31,42,46,.10),
+    inset 0 1px 0 rgba(255,255,255,.9);
 }
 
 .platform-pill .icon {
-  font-size: 16px;
-  font-weight: 700;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 32% 25%, rgba(255,255,255,.82), transparent 35%),
+    var(--orb, #dde9e2);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.72),
+    0 5px 12px rgba(31,42,46,.07);
 }
 
-.azure .icon { color: #0078d4; }
-.intune .icon { color: #2563eb; }
-.devops .icon { color: #0078d4; }
-.terraform .icon { color: #7b42f6; }
-.powershell .icon { color: #2563eb; }
-.datafactory .icon { color: #0078d4; }
-.aws .icon { color: #ff9900; }
-.powerbi .icon { color: #f2c811; }
-.defender .icon { color: #2563eb; }
-.google .icon { color: #4285f4; }
-.salesforce .icon { color: #00a1e0; }
+.platform-pill .icon svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: #1f2a2e;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.identity { --orb: #dde9e2; }
+.cloud { --orb: #bfd3dd; }
+.endpoint { --orb: #dde9e2; }
+.devops { --orb: #bfd3dd; }
+.github { --orb: #dde9e2; }
+.terraform { --orb: #cfc9e3; }
+.powershell { --orb: #dde9e2; }
+.data { --orb: #e7c7a6; }
+.event { --orb: #dde9e2; }
+.api { --orb: #bfd3dd; }
+.app { --orb: #dde9e2; }
+.storage { --orb: #e7c7a6; }
+.analytics { --orb: #dde9e2; }
+.security { --orb: #cfc9e3; }
+.monitor { --orb: #bfd3dd; }
+.backup { --orb: #dde9e2; }
+.workspace { --orb: #bfd3dd; }
+.saas { --orb: #dde9e2; }
 
 @keyframes scrollLeft {
   from {
@@ -180,6 +851,35 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .platform-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .platform-track {
+    gap: 10px;
+    animation-duration: 46s;
+  }
+
+  .platform-pill {
+    min-height: 38px;
+    padding: 8px 14px 8px 9px;
+    font-size: 12px;
+  }
+
+  .platform-pill .icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  .platform-pill .icon svg {
+    width: 13px;
+    height: 13px;
   }
 }
 </style>
