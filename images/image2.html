@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Metrics Cards</title>
+<title>Metrics Cards — Transparent Corrected</title>
 
 <style>
 *{
@@ -14,7 +14,7 @@ html,body{
     margin:0;
     padding:0;
     background:transparent;
-    font-family:Inter, "Segoe UI", sans-serif;
+    font-family:Inter, "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
 }
 
 .metrics-section{
@@ -29,107 +29,164 @@ html,body{
     gap:14px;
     width:100%;
     align-items:stretch;
+    background:transparent;
 }
 
 .metric-card{
+    position:relative;
     flex:1 1 0;
     min-width:0;
     height:140px;
-    background:#ffffff;
-    border:1px solid #d7ddeb;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 18% 10%, rgba(255,255,255,.96) 0 0, transparent 48%),
+        linear-gradient(180deg, rgba(251,252,250,.98) 0%, rgba(247,248,246,.98) 100%);
+    border:1px solid rgba(127,175,154,.38);
     border-radius:13px;
-    box-shadow:0 4px 12px rgba(30,41,59,.08);
-    padding:12px 10px;
+    box-shadow:
+        0 10px 24px rgba(31,42,46,.075),
+        inset 0 1px 0 rgba(255,255,255,.82);
+    padding:11px 9px 12px;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:flex-start;
     text-align:center;
+    isolation:isolate;
+}
+
+.metric-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+        radial-gradient(circle, rgba(127,175,154,.16) 0 1px, transparent 1.6px);
+    background-size:24px 24px;
+    opacity:.20;
+    mask-image:linear-gradient(180deg, #000 0%, transparent 68%);
+    pointer-events:none;
+    z-index:-2;
+}
+
+.metric-card::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:9px;
+    width:76px;
+    height:4px;
+    transform:translateX(-50%);
+    background:#4f7f6b;
+    border-radius:999px;
+    opacity:.62;
+    clip-path:polygon(0 48%, 14% 29%, 30% 53%, 49% 33%, 66% 51%, 84% 36%, 100% 45%, 100% 82%, 0 78%);
 }
 
 .metric-icon{
-    width:43px;
-    height:43px;
-    margin-bottom:10px;
+    position:relative;
+    width:44px;
+    height:44px;
+    margin-bottom:8px;
     flex-shrink:0;
+    display:grid;
+    place-items:center;
+    border-radius:999px;
+    background:
+        radial-gradient(circle at 32% 25%, rgba(255,255,255,.84), transparent 35%),
+        var(--orb, #dde9e2);
+    box-shadow:
+        0 11px 22px rgba(31,42,46,.075),
+        inset 0 0 0 1px rgba(255,255,255,.76);
+}
+
+.metric-icon::before,
+.metric-icon::after{
+    content:"";
+    position:absolute;
+    border-radius:999px;
+    background:var(--orb, #dde9e2);
+    filter:blur(4px);
+    opacity:.34;
+    z-index:-1;
+}
+
+.metric-icon::before{
+    inset:-4px 2px 3px -3px;
+}
+
+.metric-icon::after{
+    inset:4px -4px -3px 3px;
 }
 
 .metric-icon svg{
-    width:100%;
-    height:100%;
+    width:29px;
+    height:29px;
     display:block;
+    fill:none;
+    stroke:#1f2a2e;
+    stroke-width:1.6;
+    stroke-linecap:round;
+    stroke-linejoin:round;
 }
 
 .metric-value{
-    font-size:29px;
+    font-family:"Libre Baskerville", "Playfair Display", Georgia, serif;
+    font-size:28px;
     font-weight:700;
     line-height:1;
-    color:#1e293b;
-    margin-bottom:7px;
-    letter-spacing:-0.03em;
+    color:#1f2a2e;
+    margin:0 0 6px;
+    letter-spacing:-0.045em;
 }
 
 .metric-label{
-    font-size:12px;
-    line-height:1.3;
+    font-size:11.7px;
+    line-height:1.25;
     font-weight:500;
-    color:#1f2937;
-    max-width:92%;
+    color:#4a5a5f;
+    max-width:96%;
+    margin:0;
 }
 
 .metric-value.green{
-    color:#1F8A4C;
+    color:#4f7f6b;
 }
 
+.metric-kicker{
+    position:absolute;
+    top:9px;
+    left:10px;
+    font-size:7.5px;
+    line-height:1;
+    letter-spacing:.21em;
+    text-transform:uppercase;
+    color:rgba(74,90,95,.43);
+}
+
+.metric-card:nth-child(1) .metric-icon{--orb:#dde9e2;}
+.metric-card:nth-child(2) .metric-icon{--orb:#bfd3dd;}
+.metric-card:nth-child(3) .metric-icon{--orb:#e7c7a6;}
+.metric-card:nth-child(4) .metric-icon{--orb:#cfc9e3;}
+.metric-card:nth-child(5) .metric-icon{--orb:#dde9e2;}
+
 @media (max-width:1200px){
-    .metrics-row{
-        gap:10px;
-    }
-
-    .metric-card{
-        padding:10px 8px;
-    }
-
-    .metric-icon{
-        width:38px;
-        height:38px;
-        margin-bottom:8px;
-    }
-
-    .metric-value{
-        font-size:25px;
-        margin-bottom:6px;
-    }
-
-    .metric-label{
-        font-size:11px;
-    }
+    .metrics-row{ gap:10px; }
+    .metric-card{ padding:10px 8px 12px; }
+    .metric-icon{ width:39px; height:39px; margin-bottom:7px; }
+    .metric-icon svg{ width:25px; height:25px; }
+    .metric-value{ font-size:25px; margin-bottom:5px; }
+    .metric-label{ font-size:10.8px; }
+    .metric-kicker{ font-size:7px; left:8px; }
 }
 
 @media (max-width:900px){
-    .metrics-row{
-        gap:8px;
-    }
-
-    .metric-card{
-        padding:8px 6px;
-    }
-
-    .metric-icon{
-        width:34px;
-        height:34px;
-        margin-bottom:6px;
-    }
-
-    .metric-value{
-        font-size:21px;
-        margin-bottom:5px;
-    }
-
-    .metric-label{
-        font-size:10px;
-        line-height:1.25;
-    }
+    .metrics-row{ gap:8px; }
+    .metric-card{ padding:8px 6px 11px; }
+    .metric-icon{ width:34px; height:34px; margin-bottom:6px; }
+    .metric-icon svg{ width:22px; height:22px; }
+    .metric-value{ font-size:21px; margin-bottom:5px; }
+    .metric-label{ font-size:9.8px; line-height:1.22; }
+    .metric-kicker{ display:none; }
 }
 </style>
 </head>
@@ -140,113 +197,101 @@ html,body{
 
         <!-- Card 1 -->
         <div class="metric-card">
+            <span class="metric-kicker">Identity</span>
             <div class="metric-icon" aria-hidden="true">
                 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="flowBlue" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#4EA0FF"/>
-                            <stop offset="100%" stop-color="#1D63D2"/>
-                        </linearGradient>
-                    </defs>
-                    <rect x="8" y="10" width="40" height="44" rx="6" fill="url(#flowBlue)" stroke="#1859BE" stroke-width="1.5"/>
-                    <circle cx="18" cy="22" r="6" fill="#fff"/>
-                    <circle cx="18" cy="38" r="6" fill="#fff"/>
-                    <path d="M15 22l2 2 4-5" stroke="#2F80ED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M15 38l2 2 4-5" stroke="#2F80ED" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M30 18h14M30 34h14" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M40 14l6 4-6 4M40 30l6 4-6 4" fill="#fff"/>
-                    <path d="M48 38h10" stroke="#1D63D2" stroke-width="5" stroke-linecap="round"/>
-                    <path d="M54 32l8 6-8 6" fill="#1D63D2"/>
+                    <path d="M18 30c0-7.7 6.3-14 14-14s14 6.3 14 14"/>
+                    <path d="M22 30h20"/>
+                    <path d="M24 42h16"/>
+                    <path d="M28 50h8"/>
+                    <path d="M26 30v-6c0-3.3 2.7-6 6-6s6 2.7 6 6v6"/>
+                    <path d="M16 30h32v8c0 2.2-1.8 4-4 4H20c-2.2 0-4-1.8-4-4v-8Z"/>
+                    <path d="M32 35v7"/>
+                    <circle cx="32" cy="34.5" r="1.8"/>
                 </svg>
             </div>
             <div class="metric-value">600+</div>
-            <div class="metric-label">Automated identity workflows</div>
+            <p class="metric-label">Automated identity workflows</p>
         </div>
 
         <!-- Card 2 -->
         <div class="metric-card">
+            <span class="metric-kicker">Endpoint</span>
             <div class="metric-icon" aria-hidden="true">
                 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="deviceBlue" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#55A8FF"/>
-                            <stop offset="100%" stop-color="#2A74DB"/>
-                        </linearGradient>
-                        <linearGradient id="screenFill" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#C9DAEB"/>
-                            <stop offset="100%" stop-color="#AFC5DE"/>
-                        </linearGradient>
-                    </defs>
-                    <rect x="8" y="12" width="36" height="26" rx="3" fill="url(#deviceBlue)" stroke="#1E66C8" stroke-width="1.5"/>
-                    <rect x="12" y="16" width="28" height="18" fill="url(#screenFill)"/>
-                    <rect x="5" y="40" width="42" height="5" rx="2" fill="#2F80ED"/>
-                    <rect x="36" y="22" width="14" height="28" rx="3" fill="url(#deviceBlue)" stroke="#1E66C8" stroke-width="1.5"/>
-                    <rect x="39" y="26" width="8" height="18" fill="#DCEBFA"/>
-                    <rect x="41.5" y="45" width="3" height="1.5" rx=".75" fill="#ffffff"/>
+                    <rect x="10" y="16" width="34" height="23" rx="3"/>
+                    <path d="M21 47h20"/>
+                    <path d="M26 39v8"/>
+                    <path d="M34 39v8"/>
+                    <rect x="42" y="25" width="12" height="23" rx="3"/>
+                    <path d="M46.5 43h3"/>
+                    <path d="M17 24h18"/>
+                    <path d="M17 30h11"/>
+                    <path d="M17 54h34"/>
                 </svg>
             </div>
             <div class="metric-value">500+</div>
-            <div class="metric-label">Managed enterprise devices</div>
+            <p class="metric-label">Managed enterprise devices</p>
         </div>
 
         <!-- Card 3 -->
         <div class="metric-card">
+            <span class="metric-kicker">SaaS</span>
             <div class="metric-icon" aria-hidden="true">
                 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="32" cy="32" r="10" fill="#43A86F"/>
-                    <circle cx="14" cy="14" r="8" fill="#55BDF2"/>
-                    <circle cx="50" cy="14" r="8" fill="#4CB774"/>
-                    <circle cx="48" cy="48" r="8" fill="#3290D3"/>
-                    <line x1="22" y1="20" x2="27" y2="26" stroke="#38A169" stroke-width="4" stroke-linecap="round"/>
-                    <line x1="42" y1="20" x2="37" y2="26" stroke="#38A169" stroke-width="4" stroke-linecap="round"/>
-                    <line x1="40" y1="38" x2="44" y2="43" stroke="#38A169" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M31 9a23 23 0 0 1 12 3" fill="none" stroke="#B2E3E7" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M53 22a23 23 0 0 1 0 20" fill="none" stroke="#B2E3E7" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M19 53A23 23 0 0 1 10 22" fill="none" stroke="#76C2D8" stroke-width="4" stroke-linecap="round"/>
+                    <circle cx="32" cy="32" r="6"/>
+                    <circle cx="18" cy="18" r="5"/>
+                    <circle cx="46" cy="18" r="5"/>
+                    <circle cx="46" cy="46" r="5"/>
+                    <circle cx="18" cy="46" r="5"/>
+                    <path d="M22 22l6 6"/>
+                    <path d="M42 22l-6 6"/>
+                    <path d="M42 42l-6-6"/>
+                    <path d="M22 42l6-6"/>
+                    <path d="M32 12v5"/>
+                    <path d="M52 32h-5"/>
+                    <path d="M32 52v-5"/>
+                    <path d="M12 32h5"/>
                 </svg>
             </div>
             <div class="metric-value">10+</div>
-            <div class="metric-label">SaaS integrations delivered</div>
+            <p class="metric-label">SaaS integrations delivered</p>
         </div>
 
         <!-- Card 4 -->
         <div class="metric-card">
+            <span class="metric-kicker">Reliability</span>
             <div class="metric-icon" aria-hidden="true">
                 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="checkGreen" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#55BB77"/>
-                            <stop offset="100%" stop-color="#238D52"/>
-                        </linearGradient>
-                    </defs>
-                    <circle cx="32" cy="32" r="26" fill="url(#checkGreen)" stroke="#197948" stroke-width="1.5"/>
-                    <circle cx="32" cy="32" r="18" fill="none" stroke="#fff" stroke-width="4"/>
-                    <path d="M22 32l7 7 14-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 44c0-9 7-16 16-16s16 7 16 16"/>
+                    <path d="M22 44c0-5.7 4.3-10 10-10s10 4.3 10 10"/>
+                    <path d="M32 28V14"/>
+                    <path d="M24 17h16"/>
+                    <path d="M32 44l9-13"/>
+                    <circle cx="32" cy="44" r="3"/>
+                    <path d="M14 50h36"/>
                 </svg>
             </div>
             <div class="metric-value">99.9%</div>
-            <div class="metric-label">Platform uptime</div>
+            <p class="metric-label">Platform uptime</p>
         </div>
 
         <!-- Card 5 -->
         <div class="metric-card">
+            <span class="metric-kicker">Growth</span>
             <div class="metric-icon" aria-hidden="true">
                 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="costOrange" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#F6C55A"/>
-                            <stop offset="100%" stop-color="#E8A132"/>
-                        </linearGradient>
-                    </defs>
-                    <circle cx="32" cy="32" r="26" fill="url(#costOrange)" stroke="#D88F1D" stroke-width="1.5"/>
-                    <path d="M35 13.5c-1.3-.5-2.6-.8-4-.8-5 0-8.5 2.7-8.5 6.8 0 3.2 2 5.2 6.4 6.5l2.6.8c2.6.8 3.5 1.7 3.5 3.4 0 2.1-1.9 3.5-4.8 3.5-2.5 0-4.7-.7-6.6-2.1" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
-                    <path d="M31 10v28" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
-                    <path d="M45 34v12" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M39 42l6 7 6-7" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13 49h38"/>
+                    <path d="M19 49V36"/>
+                    <path d="M30 49V28"/>
+                    <path d="M41 49V20"/>
+                    <path d="M16 32c9-9 19-10 31-20"/>
+                    <path d="M39 12h10v10"/>
+                    <path d="M47 12L33 26"/>
                 </svg>
             </div>
             <div class="metric-value green">25%</div>
-            <div class="metric-label">Licensing cost reduction</div>
+            <p class="metric-label">Licensing cost reduction</p>
         </div>
 
     </div>
